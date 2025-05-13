@@ -7,9 +7,17 @@ class AppMeasures {
   static const double gap12 = 12.0;
   static const double gap16 = 16.0;
   static const double gap18 = 18.0;
+  static const double gap20 = 20;
   static const double gap22 = 22.0;
+  static const double gap24 = 24;
   static const double gap26 = 26.0;
+  static const double gap28 = 28;
   static const double gap32 = 32.0;
+  static const double gap40 = 40;
+  static const double gap48 = 48;
+  static const double gap64 = 64;
+  static const double gap72 = 72;
+  static const double gap96 = 96;
 
   // Padding Values (for spacing within widgets)
   static const double padding4 = 4.0;
@@ -52,16 +60,19 @@ class AppMeasures {
   static EdgeInsets get largePadding => const EdgeInsets.all(large);
 
   // Flexible Padding Methods
-  static EdgeInsets symmetricPadding(
-      {double horizontal = 0.0, double vertical = 0.0}) {
+  static EdgeInsets symmetricPadding({
+    double horizontal = 0.0,
+    double vertical = 0.0,
+  }) {
     return EdgeInsets.symmetric(horizontal: horizontal, vertical: vertical);
   }
 
-  static EdgeInsets onlyPadding(
-      {double top = 0.0,
-      double bottom = 0.0,
-      double left = 0.0,
-      double right = 0.0}) {
+  static EdgeInsets onlyPadding({
+    double top = 0.0,
+    double bottom = 0.0,
+    double left = 0.0,
+    double right = 0.0,
+  }) {
     return EdgeInsets.only(top: top, bottom: bottom, left: left, right: right);
   }
 }
