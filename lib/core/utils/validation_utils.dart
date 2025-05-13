@@ -1,19 +1,19 @@
 class ValidationUtils {
-  String? validateName(String? value) {
+  static String? validateName(String? value) {
     if (value == null || value.isEmpty) {
       return 'Please enter your name';
     }
     return null;
   }
 
-  String? validateUsername(String? value) {
+  static String? validateUsername(String? value) {
     if (value == null || value.isEmpty) {
       return 'Please enter your username';
     }
     return null;
   }
 
-  String? validateEmail(String? value) {
+  static String? validateEmail(String? value) {
     if (value == null || value.isEmpty) {
       return 'Please enter your email';
     }
@@ -23,7 +23,7 @@ class ValidationUtils {
     return null;
   }
 
-  String? validatePhoneNumber(String? value) {
+  static String? validatePhoneNumber(String? value) {
     if (value == null || value.isEmpty) {
       return 'Please enter your phone number';
     }
@@ -33,7 +33,7 @@ class ValidationUtils {
     return null;
   }
 
-  String? validatePassword(String? value) {
+  static String? validatePassword(String? value) {
     if (value == null || value.isEmpty) {
       return 'Please enter your password';
     }
@@ -43,7 +43,7 @@ class ValidationUtils {
     return null;
   }
 
-  String? validateAddress(String? value) {
+  static String? validateAddress(String? value) {
     if (value == null || value.isEmpty) {
       return 'Please enter your address';
     }

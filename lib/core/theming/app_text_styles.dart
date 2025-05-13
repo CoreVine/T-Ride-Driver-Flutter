@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import 'app_colors.dart';
 import 'app_font_families.dart';
 import 'app_font_weights.dart';
@@ -9,11 +10,12 @@ class AppTextStyles {
       AppColors.text; // Assuming you still need AppColors
 
   // Base style to reuse common properties
-  static TextStyle baseStyle(
-      {required String fontFamily,
-      required FontWeight fontWeight,
-      required double fontSize,
-      FontStyle? fontStyle}) {
+  static TextStyle baseStyle({
+    required String fontFamily,
+    required FontWeight fontWeight,
+    required double fontSize,
+    FontStyle? fontStyle,
+  }) {
     return TextStyle(
       fontFamily: fontFamily,
       color: textColor,
@@ -42,157 +44,162 @@ class AppTextStyles {
     fontSize: AppTextSizes.fontsize14,
   );
 
-  static final TextStyle poppinsBlack = baseStyle(
-    fontFamily: AppFontFamilies.fontFamilyPoppins,
+  static final TextStyle robotoBlack = baseStyle(
+    fontFamily: AppFontFamilies.fontFamilyRoboto,
     fontWeight: AppFontWeights.fontWeightBlack,
     fontSize: AppTextSizes.fontsize26,
   );
 
-  static final TextStyle poppinsBlackItalic = baseStyle(
-    fontFamily: AppFontFamilies.fontFamilyPoppins,
+  static final TextStyle robotoBlackItalic = baseStyle(
+    fontFamily: AppFontFamilies.fontFamilyRoboto,
     fontWeight: AppFontWeights.fontWeightBlack,
     fontSize: AppTextSizes.fontsize22,
     fontStyle: FontStyle.italic,
   );
 
-  static final TextStyle poppinsBold = baseStyle(
-    fontFamily: AppFontFamilies.fontFamilyPoppins,
+  static final TextStyle robotoBold = baseStyle(
+    fontFamily: AppFontFamilies.fontFamilyRoboto,
     fontWeight: AppFontWeights.fontWeightBold,
     fontSize: AppTextSizes.fontsize20,
   );
 
-  static final TextStyle poppinsBoldItalic = baseStyle(
-    fontFamily: AppFontFamilies.fontFamilyPoppins,
+  static final TextStyle robotoBoldItalic = baseStyle(
+    fontFamily: AppFontFamilies.fontFamilyRoboto,
     fontWeight: AppFontWeights.fontWeightBold,
     fontSize: AppTextSizes.fontsize18,
     fontStyle: FontStyle.italic,
   );
 
-  static final TextStyle poppinsExtraBold = baseStyle(
-    fontFamily: AppFontFamilies.fontFamilyPoppins,
+  static final TextStyle robotoExtraBold = baseStyle(
+    fontFamily: AppFontFamilies.fontFamilyRoboto,
     fontWeight: AppFontWeights.fontWeightExtraBold,
     fontSize: AppTextSizes.fontsize16,
   );
 
-  static final TextStyle poppinsExtraBoldItalic = baseStyle(
-    fontFamily: AppFontFamilies.fontFamilyPoppins,
+  static final TextStyle robotoExtraBoldItalic = baseStyle(
+    fontFamily: AppFontFamilies.fontFamilyRoboto,
     fontWeight: AppFontWeights.fontWeightExtraBold,
     fontSize: AppTextSizes.fontsize14,
     fontStyle: FontStyle.italic,
   );
 
-  static final TextStyle poppinsExtraLight = baseStyle(
-    fontFamily: AppFontFamilies.fontFamilyPoppins,
+  static final TextStyle robotoExtraLight = baseStyle(
+    fontFamily: AppFontFamilies.fontFamilyRoboto,
     fontWeight: AppFontWeights.fontWeightExtraLight,
     fontSize: AppTextSizes.fontsize12,
   );
 
-  static final TextStyle poppinsExtraLightItalic = baseStyle(
-    fontFamily: AppFontFamilies.fontFamilyPoppins,
+  static final TextStyle robotoExtraLightItalic = baseStyle(
+    fontFamily: AppFontFamilies.fontFamilyRoboto,
     fontWeight: AppFontWeights.fontWeightExtraLight,
     fontSize: AppTextSizes.fontsize10,
     fontStyle: FontStyle.italic,
   );
 
-  static final TextStyle poppinsItalic = baseStyle(
-    fontFamily: AppFontFamilies.fontFamilyPoppins,
+  static final TextStyle robotoItalic = baseStyle(
+    fontFamily: AppFontFamilies.fontFamilyRoboto,
     fontWeight: AppFontWeights.fontWeightRegular,
     fontSize: AppTextSizes.fontsize16,
     fontStyle: FontStyle.italic,
   );
 
-  static final TextStyle poppinsLight = baseStyle(
-    fontFamily: AppFontFamilies.fontFamilyPoppins,
+  static final TextStyle robotoLight = baseStyle(
+    fontFamily: AppFontFamilies.fontFamilyRoboto,
     fontWeight: AppFontWeights.fontWeightLight,
     fontSize: AppTextSizes.fontsize14,
   );
 
-  static final TextStyle poppinsLightItalic = baseStyle(
-    fontFamily: AppFontFamilies.fontFamilyPoppins,
+  static final TextStyle robotoLightItalic = baseStyle(
+    fontFamily: AppFontFamilies.fontFamilyRoboto,
     fontWeight: AppFontWeights.fontWeightLight,
     fontSize: AppTextSizes.fontsize12,
     fontStyle: FontStyle.italic,
   );
 
-  static final TextStyle poppinsMedium = baseStyle(
-    fontFamily: AppFontFamilies.fontFamilyPoppins,
+  static final TextStyle robotoMedium = baseStyle(
+    fontFamily: AppFontFamilies.fontFamilyRoboto,
     fontWeight: AppFontWeights.fontWeightMedium,
     fontSize: AppTextSizes.fontsize16,
   );
 
-  static final TextStyle poppinsMediumItalic = baseStyle(
-    fontFamily: AppFontFamilies.fontFamilyPoppins,
+  static final TextStyle robotoMediumItalic = baseStyle(
+    fontFamily: AppFontFamilies.fontFamilyRoboto,
     fontWeight: AppFontWeights.fontWeightMedium,
     fontSize: AppTextSizes.fontsize14,
     fontStyle: FontStyle.italic,
   );
 
-  static final TextStyle poppinsRegular = baseStyle(
-    fontFamily: AppFontFamilies.fontFamilyPoppins,
+  static final TextStyle robotoRegular = baseStyle(
+    fontFamily: AppFontFamilies.fontFamilyRoboto,
     fontWeight: AppFontWeights.fontWeightRegular,
     fontSize: AppTextSizes.fontsize18,
   );
-  static final TextStyle poppins18Medium = baseStyle(
-    fontFamily: AppFontFamilies.fontFamilyPoppins,
+  static final TextStyle roboto18Medium = baseStyle(
+    fontFamily: AppFontFamilies.fontFamilyRoboto,
     fontWeight: AppFontWeights.fontWeightMedium,
     fontSize: AppTextSizes.fontsize18,
   );
-  static final TextStyle poppins16Regular = baseStyle(
-    fontFamily: AppFontFamilies.fontFamilyPoppins,
+  static final TextStyle roboto16Regular = baseStyle(
+    fontFamily: AppFontFamilies.fontFamilyRoboto,
     fontWeight: AppFontWeights.fontWeightRegular,
     fontSize: AppTextSizes.fontsize16,
   );
-  static final TextStyle poppins12Medium = baseStyle(
-    fontFamily: AppFontFamilies.fontFamilyPoppins,
+  static final TextStyle roboto12Medium = baseStyle(
+    fontFamily: AppFontFamilies.fontFamilyRoboto,
     fontWeight: AppFontWeights.fontWeightMedium,
     fontSize: AppTextSizes.fontsize12,
   );
-  static final TextStyle poppins12Regular = baseStyle(
-    fontFamily: AppFontFamilies.fontFamilyPoppins,
+  static final TextStyle roboto12Regular = baseStyle(
+    fontFamily: AppFontFamilies.fontFamilyRoboto,
     fontWeight: AppFontWeights.fontWeightRegular,
     fontSize: AppTextSizes.fontsize12,
   );
-  static final TextStyle poppins10Regular = baseStyle(
-    fontFamily: AppFontFamilies.fontFamilyPoppins,
+  static final TextStyle roboto10Regular = baseStyle(
+    fontFamily: AppFontFamilies.fontFamilyRoboto,
     fontWeight: AppFontWeights.fontWeightRegular,
     fontSize: AppTextSizes.fontsize10,
   );
-  static final TextStyle poppins14Medium = baseStyle(
-    fontFamily: AppFontFamilies.fontFamilyPoppins,
+  static final TextStyle roboto14Medium = baseStyle(
+    fontFamily: AppFontFamilies.fontFamilyRoboto,
     fontWeight: AppFontWeights.fontWeightMedium,
     fontSize: AppTextSizes.fontsize14,
   );
-  static final TextStyle poppins14Regular = baseStyle(
-    fontFamily: AppFontFamilies.fontFamilyPoppins,
+  static final TextStyle roboto14Regular = baseStyle(
+    fontFamily: AppFontFamilies.fontFamilyRoboto,
     fontWeight: AppFontWeights.fontWeightRegular,
     fontSize: AppTextSizes.fontsize14,
   );
 
-  static final TextStyle poppinsSemiBold = baseStyle(
-    fontFamily: AppFontFamilies.fontFamilyPoppins,
+  static final TextStyle robotoSemiBold = baseStyle(
+    fontFamily: AppFontFamilies.fontFamilyRoboto,
     fontWeight: AppFontWeights.fontWeightSemiBold,
     fontSize: AppTextSizes.fontsize20,
   );
+  static final TextStyle robotoW600S24 = baseStyle(
+    fontFamily: AppFontFamilies.fontFamilyRoboto,
+    fontWeight: AppFontWeights.fontWeightSemiBold,
+    fontSize: AppTextSizes.fontsize24,
+  );
 
-  static final TextStyle poppinsSemiBoldItalic = baseStyle(
-    fontFamily: AppFontFamilies.fontFamilyPoppins,
+  static final TextStyle robotoSemiBoldItalic = baseStyle(
+    fontFamily: AppFontFamilies.fontFamilyRoboto,
     fontWeight: AppFontWeights.fontWeightSemiBold,
     fontSize: AppTextSizes.fontsize18,
     fontStyle: FontStyle.italic,
   );
 
-  static final TextStyle poppinsThin = baseStyle(
-    fontFamily: AppFontFamilies.fontFamilyPoppins,
+  static final TextStyle robotoThin = baseStyle(
+    fontFamily: AppFontFamilies.fontFamilyRoboto,
     fontWeight: AppFontWeights.fontWeightThin,
     fontSize: AppTextSizes.fontsize10,
   );
-  static final TextStyle poppinsLightMedium = baseStyle(
-    fontFamily: AppFontFamilies.fontFamilyPoppins,
+  static final TextStyle robotoLightMedium = baseStyle(
+    fontFamily: AppFontFamilies.fontFamilyRoboto,
     fontWeight: AppFontWeights.fontWeightLightMedium,
     fontSize: AppTextSizes.fontsize12,
   );
-  static final TextStyle poppinsThinItalic = baseStyle(
-    fontFamily: AppFontFamilies.fontFamilyPoppins,
+  static final TextStyle robotoThinItalic = baseStyle(
+    fontFamily: AppFontFamilies.fontFamilyRoboto,
     fontWeight: AppFontWeights.fontWeightThin,
     fontSize: AppTextSizes.fontsize12,
     fontStyle: FontStyle.italic,

@@ -7,7 +7,7 @@ List<Map<String, dynamic>> languages = [
   },
   {
     "name": "English",
-    "image": 'assets/images/England.png',
+    "image": 'assets/images/English.png',
     "shortName": "en",
     "code": "en",
   },

@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:tride/core/routing/routes.dart';
 import 'package:tride/features/Auth/presentation/pages/login_screen.dart';
+import 'package:tride/features/setting/presentation/pages/reset_password_screen.dart';
+import 'package:tride/features/setting/presentation/pages/setting_screen.dart';
+import 'package:tride/features/setting/presentation/pages/update_password_screen.dart';
+import 'package:tride/features/setting/presentation/pages/user_profile_screen.dart';
+import 'package:tride/features/setting/presentation/pages/verification_code_screen.dart';
 import 'package:tride/features/splash/splash_screen.dart';
 
 class AppRouter {
@@ -18,6 +23,19 @@ class AppRouter {
 
       // case Routes.homeScreen:
       //   return MaterialPageRoute(builder: (_) => const HomeScreen());
+
+      case Routes.resetPasswordScreen:
+        return MaterialPageRoute(builder: (_) => const ResetPasswordScreen());
+      case Routes.verificationCodeScreen:
+        return MaterialPageRoute(
+          builder: (_) => const VerificationCodeScreen(),
+        );
+      case Routes.settingScreen:
+        return MaterialPageRoute(builder: (_) => const SettingScreen());
+      case Routes.userProfileScreen:
+        return MaterialPageRoute(builder: (_) => const UserProfileScreen());
+      case Routes.updatePasswordScreen:
+        return MaterialPageRoute(builder: (_) => const UpdatePasswordScreen());
     }
     return null;
   }

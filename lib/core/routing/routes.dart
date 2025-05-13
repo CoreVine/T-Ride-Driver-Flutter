@@ -6,4 +6,10 @@ class Routes {
   static const String loginScreen = '/loginScreen';
   static const String signUpScreen = '/signUpScreen';
   static const String homeScreen = '/homeScreen';
+  static const String resetPasswordScreen = '/resetPasswordScreen';
+  static const String settingScreen = '/settingScreen';
+  static const String updatePasswordScreen = '/updatePasswordScreen';
+  static const String verificationCodeScreen = '/verificationCodeScreen';
+  static const String userProfileScreen = '/userProfileScreen';
+  static const String userProfileEditScreen = '/userProfileEditScreen';
 }

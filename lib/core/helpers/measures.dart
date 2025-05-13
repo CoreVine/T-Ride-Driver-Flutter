@@ -26,6 +26,7 @@ class AppMeasures {
   static const double padding16 = 16.0;
   static const double padding18 = 18.0;
   static const double padding22 = 22.0;
+  static const double padding24 = 24.0;
   static const double padding26 = 26.0;
   static const double padding32 = 32.0;
 
