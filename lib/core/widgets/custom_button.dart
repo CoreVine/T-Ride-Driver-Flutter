@@ -34,7 +34,7 @@ class CustomButton extends StatelessWidget {
       child: ElevatedButton(
         onPressed: onPressed,
         style: ElevatedButton.styleFrom(
-          backgroundColor: bgColor ?? AppColors.primary,
+          backgroundColor: bgColor ?? AppColors.orange,
           padding: EdgeInsets.symmetric(
             horizontal:
                 xPadding != null ? xPadding!.w : AppPaddings.gapPadding8,
@@ -45,26 +45,24 @@ class CustomButton extends StatelessWidget {
             side: BorderSide(color: AppColors.transparent, width: 1.5.sp),
           ),
         ),
-        child:
-            isLoading
-                ? const Center(
-                  child: SizedBox(
-                    width: 24,
-                    height: 24,
-                    child: CircularProgressIndicator(
-                      color: AppColors.background,
-                      strokeWidth: AppStrokes.strokeVlg,
-                    ),
+        child: isLoading
+            ? Center(
+                child: SizedBox(
+                  width: 24,
+                  height: 24,
+                  child: CircularProgressIndicator(
+                    color: AppColors.white,
+                    strokeWidth: AppStrokes.strokeVlg,
                   ),
-                )
-                : Text(
-                  text,
-                  style:
-                      textStyle ??
-                      AppTextStyles.poppins16Regular.copyWith(
-                        color: AppColors.background,
-                      ),
                 ),
+              )
+            : Text(
+                text,
+                style: textStyle ??
+                    AppTextStyles.poppins16Regular.copyWith(
+                      color: AppColors.white,
+                    ),
+              ),
       ),
     );
   }
