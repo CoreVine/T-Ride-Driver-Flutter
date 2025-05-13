@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:tride/core/helpers/extensions.dart';
+import 'package:tride/core/theming/app_assets.dart';
 import 'dart:async';
 
 import '../../core/routing/routes.dart';
@@ -14,7 +16,8 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen>
     with SingleTickerProviderStateMixin {
   late AnimationController _controller;
-  late Animation<double> _animation;
+  late Animation<double> _scaleAnimation;
+  late Animation<double> _rotationAnimation;
 
   @override
   void initState() {
@@ -22,15 +25,27 @@ class _SplashScreenState extends State<SplashScreen>
 
     _controller = AnimationController(
       vsync: this,
-      duration: const Duration(seconds: 2),
+      duration: const Duration(seconds: 3),
     );
-    _animation = CurvedAnimation(parent: _controller, curve: Curves.easeInOut);
+
+    // Scale animation
+    _scaleAnimation =
+        CurvedAnimation(parent: _controller, curve: Curves.easeInOut);
+
+    // Rotation animation (full 360 degrees, or 2π radians)
+    _rotationAnimation = Tween<double>(
+      begin: 0.0,
+      end: 2 * 3.14159, // 2π radians for a full rotation
+    ).animate(CurvedAnimation(
+      parent: _controller,
+      curve: Curves.easeInOut,
+    ));
 
     _controller.forward();
 
-    Timer(const Duration(seconds: 3), () {
+    Timer(const Duration(seconds: 4), () {
       context.pushReplacementNamed(
-        Routes.loginScreen,
+        Routes.onBoardingScreen,
         // hasTokenConstant
         //     ? Routes.mainScreen
         //     : passedIntroConstant
@@ -49,16 +64,26 @@ class _SplashScreenState extends State<SplashScreen>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.orangeAccent,
       body: Center(
-        child: ScaleTransition(
-          scale: _animation,
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [Image.asset("assets/images/Arabic.png")],
-          ),
+        child: AnimatedBuilder(
+          animation: _controller,
+          builder: (context, child) {
+            return Transform.rotate(
+              angle: _rotationAnimation.value,
+              child: ScaleTransition(
+                scale: _scaleAnimation,
+                child: Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 30.w),
+                  child: Image.asset(
+                    AppAssets.logo,
+                    width: 250.w,
+                    height: 70.h,
+                  ),
+                ),
+              ),
+            );
+          },
         ),
       ),
     );
