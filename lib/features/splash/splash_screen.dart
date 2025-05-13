@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:tride/core/helpers/extensions.dart';
 import 'package:tride/core/theming/app_assets.dart';
+import 'package:tride/core/theming/app_colors.dart';
 import 'dart:async';
 
 import '../../core/routing/routes.dart';
@@ -16,8 +17,7 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen>
     with SingleTickerProviderStateMixin {
   late AnimationController _controller;
-  late Animation<double> _scaleAnimation;
-  late Animation<double> _rotationAnimation;
+  late Animation<Offset> _slideAnimation;
 
   @override
   void initState() {
@@ -25,25 +25,23 @@ class _SplashScreenState extends State<SplashScreen>
 
     _controller = AnimationController(
       vsync: this,
-      duration: const Duration(seconds: 3),
+      duration: const Duration(seconds: 2),
     );
 
-    // Scale animation
-    _scaleAnimation =
-        CurvedAnimation(parent: _controller, curve: Curves.easeInOut);
-
-    // Rotation animation (full 360 degrees, or 2π radians)
-    _rotationAnimation = Tween<double>(
-      begin: 0.0,
-      end: 2 * 3.14159, // 2π radians for a full rotation
+    // Slide animation from left to center
+    _slideAnimation = Tween<Offset>(
+      begin: const Offset(-2.0, 0.0), // Start from left side of screen
+      end: Offset.zero, // End at the center of the screen
     ).animate(CurvedAnimation(
       parent: _controller,
-      curve: Curves.easeInOut,
+      // Use a curve that gives a car-like movement effect with slight deceleration at the end
+      curve: Curves.easeOutCubic,
     ));
 
     _controller.forward();
 
-    Timer(const Duration(seconds: 4), () {
+    // Navigate to the next screen after the animation completes (with a small delay)
+    Timer(const Duration(seconds: 3), () {
       context.pushReplacementNamed(
         Routes.onBoardingScreen,
         // hasTokenConstant
@@ -64,26 +62,18 @@ class _SplashScreenState extends State<SplashScreen>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.orangeAccent,
+      backgroundColor: AppColors.orange,
       body: Center(
-        child: AnimatedBuilder(
-          animation: _controller,
-          builder: (context, child) {
-            return Transform.rotate(
-              angle: _rotationAnimation.value,
-              child: ScaleTransition(
-                scale: _scaleAnimation,
-                child: Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 30.w),
-                  child: Image.asset(
-                    AppAssets.logo,
-                    width: 250.w,
-                    height: 70.h,
-                  ),
-                ),
-              ),
-            );
-          },
+        child: SlideTransition(
+          position: _slideAnimation,
+          child: Padding(
+            padding: EdgeInsets.symmetric(horizontal: 30.w),
+            child: Image.asset(
+              AppAssets.logo,
+              width: 250.w,
+              height: 70.h,
+            ),
+          ),
         ),
       ),
     );

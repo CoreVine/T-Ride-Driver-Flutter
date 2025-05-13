@@ -64,6 +64,76 @@ class S {
       args: [],
     );
   }
+
+  /// `Join as a Trusted Driver`
+  String get firstOnBoardingTitle {
+    return Intl.message(
+      'Join as a Trusted Driver',
+      name: 'firstOnBoardingTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Become part of our team and help transport children safely and securely.`
+  String get firstOnBoardingDesc {
+    return Intl.message(
+      'Become part of our team and help transport children safely and securely.',
+      name: 'firstOnBoardingDesc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Flexible Schedule`
+  String get secondOnBoardingTitle {
+    return Intl.message(
+      'Flexible Schedule',
+      name: 'secondOnBoardingTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Choose your own hours and work when it fits your lifestyle.`
+  String get secondOnBoardingDesc {
+    return Intl.message(
+      'Choose your own hours and work when it fits your lifestyle.',
+      name: 'secondOnBoardingDesc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Earn Good Income`
+  String get thirdOnBoardingTitle {
+    return Intl.message(
+      'Earn Good Income',
+      name: 'thirdOnBoardingTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Receive competitive pay with opportunities for bonuses.`
+  String get thirdOnBoardingDesc {
+    return Intl.message(
+      'Receive competitive pay with opportunities for bonuses.',
+      name: 'thirdOnBoardingDesc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Next`
+  String get next {
+    return Intl.message('Next', name: 'next', desc: '', args: []);
+  }
+
+  /// `Skip`
+  String get skip {
+    return Intl.message('Skip', name: 'skip', desc: '', args: []);
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

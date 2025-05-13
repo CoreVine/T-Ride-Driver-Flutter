@@ -22,6 +22,26 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+    "firstOnBoardingDesc": MessageLookupByLibrary.simpleMessage(
+      "Become part of our team and help transport children safely and securely.",
+    ),
+    "firstOnBoardingTitle": MessageLookupByLibrary.simpleMessage(
+      "Join as a Trusted Driver",
+    ),
+    "next": MessageLookupByLibrary.simpleMessage("Next"),
+    "secondOnBoardingDesc": MessageLookupByLibrary.simpleMessage(
+      "Choose your own hours and work when it fits your lifestyle.",
+    ),
+    "secondOnBoardingTitle": MessageLookupByLibrary.simpleMessage(
+      "Flexible Schedule",
+    ),
+    "skip": MessageLookupByLibrary.simpleMessage("Skip"),
+    "thirdOnBoardingDesc": MessageLookupByLibrary.simpleMessage(
+      "Receive competitive pay with opportunities for bonuses.",
+    ),
+    "thirdOnBoardingTitle": MessageLookupByLibrary.simpleMessage(
+      "Earn Good Income",
+    ),
     "welcome": MessageLookupByLibrary.simpleMessage("Welcome to T-Ride App"),
   };
 }

@@ -59,7 +59,7 @@ class CustomButton extends StatelessWidget {
             : Text(
                 text,
                 style: textStyle ??
-                    AppTextStyles.poppins16Regular.copyWith(
+                    AppTextStyles.roboto16Regular.copyWith(
                       color: AppColors.white,
                     ),
               ),

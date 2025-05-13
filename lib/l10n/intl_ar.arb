@@ -1,3 +1,12 @@
 {
-  "welcome": "مرحبًا بك في تطبيق T-Ride"
+  "welcome": "مرحبًا بك في تطبيق T-Ride",
+  "joinAsaTrustedDriver": "انضم كسائق موثوق",
+  "next" : "التالي",
+  "firstOnBoardingTitle": "Join as a Trusted Driver",
+  "firstOnBoardingDesc": "Become part of our team and help transport children safely and securely.",
+  "secondOnBoardingTitle": "Flexible Schedule",
+  "secondOnBoardingDesc": "Choose your own hours and work when it fits your lifestyle.",
+  "thirdOnBoardingTitle": "Earn Good Income",
+  "thirdOnBoardingDesc": "Receive competitive pay with opportunities for bonuses.",
+  "Skip" : "تخطي"
 }

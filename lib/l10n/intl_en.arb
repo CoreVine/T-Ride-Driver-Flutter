@@ -1,3 +1,11 @@
 {
-  "welcome": "Welcome to T-Ride App"
+  "welcome": "Welcome to T-Ride App",
+  "firstOnBoardingTitle": "Join as a Trusted Driver",
+  "firstOnBoardingDesc": "Become part of our team and help transport children safely and securely.",
+  "secondOnBoardingTitle": "Flexible Schedule",
+  "secondOnBoardingDesc": "Choose your own hours and work when it fits your lifestyle.",
+  "thirdOnBoardingTitle": "Earn Good Income",
+  "thirdOnBoardingDesc": "Receive competitive pay with opportunities for bonuses.",
+  "next": "Next",
+  "skip": "Skip"
 }
