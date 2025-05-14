@@ -1,6 +1,7 @@
 import 'package:get_it/get_it.dart';
 import 'package:tride/core/api/api_manager.dart';
 import 'package:tride/core/api/dio_factory.dart';
+import 'package:tride/features/Auth/presentation/cubit/auth_cubit.dart';
 import 'package:tride/features/onboarding/presentation/manager/on_boarding_cubit.dart';
 import 'package:tride/features/translation/cubit/localization_cubit.dart';
 
@@ -90,6 +91,7 @@ Future<void> setupGetIt() async {
   //   );
   getIt.registerFactory<LocaleCubit>(() => LocaleCubit());
   getIt.registerFactory<OnBoardingCubit>(() => OnBoardingCubit());
+  getIt.registerFactory<AuthCubit>(() => AuthCubit());
 
   //   getIt.registerFactory<CompaniesCubit>(
   //     () => CompaniesCubit(getIt<GetCompaniesUsecaseImpl>()),

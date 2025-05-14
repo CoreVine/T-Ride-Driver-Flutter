@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:tride/core/routing/routes.dart';
+import 'package:tride/features/Auth/presentation/cubit/auth_cubit.dart';
 import 'package:tride/features/Auth/presentation/pages/login_screen.dart';
+import 'package:tride/features/Auth/presentation/pages/register_screen.dart';
 import 'package:tride/features/onboarding/presentation/pages/on_boarding_screen.dart';
 import 'package:tride/features/splash/splash_screen.dart';
 
@@ -17,13 +19,24 @@ class AppRouter {
         return MaterialPageRoute(builder: (_) => const SplashScreen());
 
       case Routes.loginScreen:
-        return MaterialPageRoute(builder: (_) => const LoginScreen());
+        return MaterialPageRoute(
+            builder: (_) => BlocProvider(
+                  create: (context) => getIt<AuthCubit>(),
+                  child: LoginScreen(),
+                ));
+
+      case Routes.signUpScreen:
+        return MaterialPageRoute(
+            builder: (_) => BlocProvider(
+                  create: (context) => getIt<AuthCubit>(),
+                  child: RegisterScreen(),
+                ));
       case Routes.onBoardingScreen:
         return MaterialPageRoute(
             builder: (_) => BlocProvider(
-              create: (context) => getIt<OnBoardingCubit>(),
-              child: OnboardingScreen(),
-            ));
+                  create: (context) => getIt<OnBoardingCubit>(),
+                  child: OnboardingScreen(),
+                ));
       // case Routes.signUpScreen:
       //   return MaterialPageRoute(builder: (_) => const SignupScreen());
 

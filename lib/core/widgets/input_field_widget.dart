@@ -15,6 +15,7 @@ class CustomTextField extends StatelessWidget {
     this.suffixIcon,
     this.hintText,
     this.initialValue,
+    this.onSuffixButton,
   });
 
   final TextEditingController textController;
@@ -25,6 +26,7 @@ class CustomTextField extends StatelessWidget {
   final String? Function(String? value) validator;
   final String? hintText;
   final String? initialValue;
+  final VoidCallback? onSuffixButton;
 
   @override
   Widget build(BuildContext context) {
@@ -35,8 +37,8 @@ class CustomTextField extends StatelessWidget {
         children: [
           Text(
             labelText,
-            style:
-                AppTextStyles.roboto14Medium.copyWith(color: AppColors.black),
+            style: AppTextStyles.roboto14Medium
+                .copyWith(color: AppColors.darkGray),
           ),
           SizedBox(height: 4.h),
           TextFormField(
@@ -44,6 +46,7 @@ class CustomTextField extends StatelessWidget {
             obscureText: isObscure ?? false,
             controller: textController,
             initialValue: initialValue,
+            cursorColor: AppColors.orange,
             style: TextStyle(
               fontSize: 16.sp,
               color: Colors.black,
@@ -69,7 +72,8 @@ class CustomTextField extends StatelessWidget {
               errorBorder: UnderlineInputBorder(
                 borderSide: BorderSide(color: AppColors.red),
               ),
-              suffixIcon: suffixIcon,
+              suffixIcon: onSuffixButton != null ? GestureDetector(
+                  onTap: onSuffixButton, child: suffixIcon) : suffixIcon,
             ),
             validator: validator,
           ),

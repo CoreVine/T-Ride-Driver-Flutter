@@ -85,40 +85,40 @@ class S {
     );
   }
 
-  /// `Flexible Schedule`
+  /// `Easy Ride Management`
   String get secondOnBoardingTitle {
     return Intl.message(
-      'Flexible Schedule',
+      'Easy Ride Management',
       name: 'secondOnBoardingTitle',
       desc: '',
       args: [],
     );
   }
 
-  /// `Choose your own hours and work when it fits your lifestyle.`
+  /// `View nearby requests, accept rides, and get started seamlessly.`
   String get secondOnBoardingDesc {
     return Intl.message(
-      'Choose your own hours and work when it fits your lifestyle.',
+      'View nearby requests, accept rides, and get started seamlessly.',
       name: 'secondOnBoardingDesc',
       desc: '',
       args: [],
     );
   }
 
-  /// `Earn Good Income`
+  /// `Safety and Trust Above All`
   String get thirdOnBoardingTitle {
     return Intl.message(
-      'Earn Good Income',
+      'Safety and Trust Above All',
       name: 'thirdOnBoardingTitle',
       desc: '',
       args: [],
     );
   }
 
-  /// `Receive competitive pay with opportunities for bonuses.`
+  /// `Follow safety protocols to ensure the comfort and security of families.`
   String get thirdOnBoardingDesc {
     return Intl.message(
-      'Receive competitive pay with opportunities for bonuses.',
+      'Follow safety protocols to ensure the comfort and security of families.',
       name: 'thirdOnBoardingDesc',
       desc: '',
       args: [],
@@ -133,6 +133,86 @@ class S {
   /// `Skip`
   String get skip {
     return Intl.message('Skip', name: 'skip', desc: '', args: []);
+  }
+
+  /// `Start`
+  String get start {
+    return Intl.message('Start', name: 'start', desc: '', args: []);
+  }
+
+  /// `Your Email`
+  String get yourEmail {
+    return Intl.message('Your Email', name: 'yourEmail', desc: '', args: []);
+  }
+
+  /// `Password`
+  String get password {
+    return Intl.message('Password', name: 'password', desc: '', args: []);
+  }
+
+  /// `Sign Up`
+  String get signUp {
+    return Intl.message('Sign Up', name: 'signUp', desc: '', args: []);
+  }
+
+  /// `Login`
+  String get login {
+    return Intl.message('Login', name: 'login', desc: '', args: []);
+  }
+
+  /// `Or sign up with social account`
+  String get orSingUpWithSocialAccount {
+    return Intl.message(
+      'Or sign up with social account',
+      name: 'orSingUpWithSocialAccount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Facebook`
+  String get facebook {
+    return Intl.message('Facebook', name: 'facebook', desc: '', args: []);
+  }
+
+  /// `Google`
+  String get google {
+    return Intl.message('Google', name: 'google', desc: '', args: []);
+  }
+
+  /// `By signing up, you agree to our `
+  String get bySigningUpYouAgreeToOur {
+    return Intl.message(
+      'By signing up, you agree to our ',
+      name: 'bySigningUpYouAgreeToOur',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Terms of Use`
+  String get termsOfUse {
+    return Intl.message('Terms of Use', name: 'termsOfUse', desc: '', args: []);
+  }
+
+  /// ` and `
+  String get and {
+    return Intl.message(' and ', name: 'and', desc: '', args: []);
+  }
+
+  /// `Privacy Policy`
+  String get privacyPolicy {
+    return Intl.message(
+      'Privacy Policy',
+      name: 'privacyPolicy',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Forget`
+  String get forgetPassword {
+    return Intl.message('Forget', name: 'forgetPassword', desc: '', args: []);
   }
 }
 

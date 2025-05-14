@@ -158,7 +158,9 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 Navigator.pushReplacementNamed(context, Routes.loginScreen);
               },
               child: Text(
-                S.of(context).skip,
+                cubit.currentPage < cubit.numPages - 1
+                    ? S.of(context).skip
+                    : S.of(context).start,
                 style: AppTextStyles.roboto18Medium,
               ),
             )),

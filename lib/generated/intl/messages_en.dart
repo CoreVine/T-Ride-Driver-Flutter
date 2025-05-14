@@ -22,26 +22,43 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+    "and": MessageLookupByLibrary.simpleMessage(" and "),
+    "bySigningUpYouAgreeToOur": MessageLookupByLibrary.simpleMessage(
+      "By signing up, you agree to our ",
+    ),
+    "facebook": MessageLookupByLibrary.simpleMessage("Facebook"),
     "firstOnBoardingDesc": MessageLookupByLibrary.simpleMessage(
       "Become part of our team and help transport children safely and securely.",
     ),
     "firstOnBoardingTitle": MessageLookupByLibrary.simpleMessage(
       "Join as a Trusted Driver",
     ),
+    "forgetPassword": MessageLookupByLibrary.simpleMessage("Forget"),
+    "google": MessageLookupByLibrary.simpleMessage("Google"),
+    "login": MessageLookupByLibrary.simpleMessage("Login"),
     "next": MessageLookupByLibrary.simpleMessage("Next"),
+    "orSingUpWithSocialAccount": MessageLookupByLibrary.simpleMessage(
+      "Or sign up with social account",
+    ),
+    "password": MessageLookupByLibrary.simpleMessage("Password"),
+    "privacyPolicy": MessageLookupByLibrary.simpleMessage("Privacy Policy"),
     "secondOnBoardingDesc": MessageLookupByLibrary.simpleMessage(
-      "Choose your own hours and work when it fits your lifestyle.",
+      "View nearby requests, accept rides, and get started seamlessly.",
     ),
     "secondOnBoardingTitle": MessageLookupByLibrary.simpleMessage(
-      "Flexible Schedule",
+      "Easy Ride Management",
     ),
+    "signUp": MessageLookupByLibrary.simpleMessage("Sign Up"),
     "skip": MessageLookupByLibrary.simpleMessage("Skip"),
+    "start": MessageLookupByLibrary.simpleMessage("Start"),
+    "termsOfUse": MessageLookupByLibrary.simpleMessage("Terms of Use"),
     "thirdOnBoardingDesc": MessageLookupByLibrary.simpleMessage(
-      "Receive competitive pay with opportunities for bonuses.",
+      "Follow safety protocols to ensure the comfort and security of families.",
     ),
     "thirdOnBoardingTitle": MessageLookupByLibrary.simpleMessage(
-      "Earn Good Income",
+      "Safety and Trust Above All",
     ),
     "welcome": MessageLookupByLibrary.simpleMessage("Welcome to T-Ride App"),
+    "yourEmail": MessageLookupByLibrary.simpleMessage("Your Email"),
   };
 }

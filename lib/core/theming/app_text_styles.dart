@@ -137,6 +137,11 @@ class AppTextStyles {
     fontWeight: AppFontWeights.fontWeightMedium,
     fontSize: AppTextSizes.fontsize18,
   );
+  static final TextStyle roboto18Regular = baseStyle(
+    fontFamily: AppFontFamilies.fontFamilyRoboto,
+    fontWeight: AppFontWeights.fontWeightRegular,
+    fontSize: AppTextSizes.fontsize18,
+  );
   static final TextStyle roboto16Regular = baseStyle(
     fontFamily: AppFontFamilies.fontFamilyRoboto,
     fontWeight: AppFontWeights.fontWeightSemiBold,
@@ -166,6 +171,11 @@ class AppTextStyles {
     fontFamily: AppFontFamilies.fontFamilyRoboto,
     fontWeight: AppFontWeights.fontWeightRegular,
     fontSize: AppTextSizes.fontsize14,
+  );
+  static final TextStyle roboto24SemiBold = baseStyle(
+    fontFamily: AppFontFamilies.fontFamilyRoboto,
+    fontWeight: AppFontWeights.fontWeightSemiBold,
+    fontSize: AppTextSizes.fontSize24,
   );
 
   static final TextStyle robotoSemiBold = baseStyle(
