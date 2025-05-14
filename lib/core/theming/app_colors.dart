@@ -1,10 +1,6 @@
 import 'package:flutter/material.dart';
 
 class AppColors {
-  static const Color background = Color(0xFFFFFFFF);
-  static const Color primary = Color(0xFF0077FF);
-  static const Color text = Color(0xFF282828);
-  static const Color transparent = Colors.transparent;
   static Color white = Color(0XFFFFFFFF);
   static Color green = Color(0XFF37CD58);
   static Color green30 = Color(0X4D37CD58); // ← تم التعديل هنا
@@ -25,7 +21,8 @@ class AppColors {
   static Color black = Color(0XFF282828);
   static Color darkBlack = Color(0XFF414141);
   static Color blue = Color(0XFF48A0FF);
-  static Color blue30 = Color(0X4D48A0FF); // ← يمكن إضافتها إذا احتجت
+  static Color blue30 = Color(0X4D48A0FF);
+  static Color transparent = Colors.transparent; // ← يمكن إضافتها إذا احتجت
 
   // Optional: Add a method to create a MaterialColor from a single Color
   static MaterialColor createMaterialColor(Color color) {
