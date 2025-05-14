@@ -1,4 +1,4 @@
-   import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:tride/core/theming/app_colors.dart';
 import 'package:tride/core/theming/app_paddings.dart';
@@ -34,10 +34,9 @@ class CustomButton extends StatelessWidget {
       child: ElevatedButton(
         onPressed: onPressed,
         style: ElevatedButton.styleFrom(
-          backgroundColor: bgColor ?? AppColors.orange  ,
+          backgroundColor: bgColor ?? AppColors.orange,
           padding: EdgeInsets.symmetric(
-            horizontal:
-                xPadding != null ? xPadding!.w : AppPaddings.gapPadding8,
+            horizontal: xPadding != null ? xPadding!.w : AppPaddings.gapPadding8,
             vertical: yPadding != null ? yPadding!.h : AppPaddings.gapPadding8,
           ),
           shape: RoundedRectangleBorder(
@@ -51,17 +50,10 @@ class CustomButton extends StatelessWidget {
                   child: SizedBox(
                     width: 24,
                     height: 24,
-                    child: CircularProgressIndicator(
-                      color: AppColors.transparent,
-                      strokeWidth: AppStrokes.strokeVlg,
-                    ),
+                    child: CircularProgressIndicator(color: AppColors.white, strokeWidth: AppStrokes.strokeVlg),
                   ),
                 )
-                : Text(
-                  text,
-                  style:
-                      textStyle
-                ),
+                : Text(text, style: textStyle ?? AppTextStyles.roboto16SemiBold(context)),
       ),
     );
   }

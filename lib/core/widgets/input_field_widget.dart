@@ -27,15 +27,9 @@ class InputFieldWidget extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Padding(
-            padding: EdgeInsets.symmetric(horizontal: 8.0.w),
-            child: Text(labelText,)
-          ),
+          Padding(padding: EdgeInsets.symmetric(horizontal: 8.0.w), child: Text(labelText)),
           Container(
-            decoration: BoxDecoration(
-              color: const Color(0x0f282828),
-              borderRadius: BorderRadius.circular(12.0),
-            ),
+            decoration: BoxDecoration(color: const Color(0x0f282828), borderRadius: BorderRadius.circular(12.0)),
             child: TextFormField(
               keyboardType: keyboardType,
               obscureText: isObscure ?? false,
@@ -59,17 +53,14 @@ class InputFieldWidget extends StatelessWidget {
                   borderRadius: BorderRadius.circular(12.0),
                   borderSide: const BorderSide(color: Colors.red),
                 ),
-                contentPadding: const EdgeInsets.symmetric(
-                  horizontal: 16,
-                  vertical: 12,
-                ),
+                contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
                 suffixIcon: suffixIcon,
               ),
               validator: validator,
             ),
           ),
         ],
-    )
+      ),
     );
   }
 }
