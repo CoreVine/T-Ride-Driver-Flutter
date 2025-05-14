@@ -34,7 +34,7 @@ class ForgetPasswordScreen extends StatelessWidget {
                 },
                 child: Text(
                   S.of(context).back,
-                  style: AppTextStyles.roboto18Medium,
+                  style: AppTextStyles.roboto18Medium(context),
                 ),
               )
             ],
@@ -42,7 +42,7 @@ class ForgetPasswordScreen extends StatelessWidget {
           SizedBox(height: AppMeasures.gap24),
           Text(
             S.of(context).forgetPassword,
-            style: AppTextStyles.roboto24SemiBold,
+            style: AppTextStyles.roboto24SemiBold(context),
           ),
           SizedBox(height: AppMeasures.gap72),
           CustomTextField(

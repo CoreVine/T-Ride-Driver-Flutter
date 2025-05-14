@@ -84,7 +84,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
       children: [
         Text(
           page.title,
-          style: AppTextStyles.roboto16Regular.copyWith(color: AppColors.black),
+          style: AppTextStyles.roboto16Regular(context)
+              .copyWith(color: AppColors.black),
           textAlign: TextAlign.center,
         ),
         SizedBox(height: 8.h),
@@ -92,7 +93,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
           width: 250.w,
           child: Text(
             page.description,
-            style: AppTextStyles.roboto14Medium
+            style: AppTextStyles.roboto14Medium(context)
                 .copyWith(color: AppColors.darkGray),
             textAlign: TextAlign.center,
           ),
@@ -161,7 +162,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 cubit.currentPage < cubit.numPages - 1
                     ? S.of(context).skip
                     : S.of(context).start,
-                style: AppTextStyles.roboto18Medium,
+                style: AppTextStyles.roboto18Medium(context),
               ),
             )),
       ],

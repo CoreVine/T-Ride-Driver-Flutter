@@ -65,7 +65,7 @@ class _CustomPinSubmissionWidgetState extends State<CustomPinSubmissionWidget> {
             controller: _controllers[index],
             textAlign: TextAlign.center,
             keyboardType: TextInputType.number,
-            style: AppTextStyles.robotoSemiBold,
+            style: AppTextStyles.roboto18Medium(context),
             onChanged: (value) {
               if (value.isNotEmpty && index < 5) {
                 _focusNodes[index + 1].requestFocus();

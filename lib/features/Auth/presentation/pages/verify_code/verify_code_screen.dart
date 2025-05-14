@@ -43,7 +43,7 @@ class VerifyCodeScreen extends StatelessWidget {
                     },
                     child: Text(
                       S.of(context).back,
-                      style: AppTextStyles.roboto18Medium,
+                      style: AppTextStyles.roboto18Medium(context),
                     ),
                   )
                 ],
@@ -51,7 +51,7 @@ class VerifyCodeScreen extends StatelessWidget {
               SizedBox(height: AppMeasures.gap24),
               Text(
                 S.of(context).emailVerification,
-                style: AppTextStyles.roboto24SemiBold,
+                style: AppTextStyles.roboto24SemiBold(context),
               ),
               SizedBox(height: AppMeasures.gap72),
               CustomPinSubmissionWidget(
@@ -76,7 +76,7 @@ class VerifyCodeScreen extends StatelessWidget {
               Center(
                   child: Text(
                 S.of(context).resendTheCode,
-                style: AppTextStyles.roboto14Medium.copyWith(
+                style: AppTextStyles.roboto14Medium(context).copyWith(
                   color: Colors.black,
                   decoration: TextDecoration.underline,
                   fontWeight: FontWeight.bold,

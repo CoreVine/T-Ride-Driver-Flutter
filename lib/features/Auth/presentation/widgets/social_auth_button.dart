@@ -40,7 +40,7 @@ class SocialAuthButton extends StatelessWidget {
             Center(
               child: Text(
                 label,
-                style: AppTextStyles.roboto16Regular.copyWith(
+                style: AppTextStyles.roboto16Regular(context).copyWith(
                   color: AppColors.black,
                 ),
               ),

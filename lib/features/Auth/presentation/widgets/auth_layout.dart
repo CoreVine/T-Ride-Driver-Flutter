@@ -50,7 +50,7 @@ class AuthLayout extends StatelessWidget {
                   onTap: onSwitchTap,
                   child: Text(
                     switchText,
-                    style: AppTextStyles.roboto18Medium,
+                    style: AppTextStyles.roboto18Medium(context),
                   ),
                 )
               ],
@@ -58,7 +58,7 @@ class AuthLayout extends StatelessWidget {
             SizedBox(height: AppMeasures.gap24),
             Text(
               title,
-              style: AppTextStyles.roboto24SemiBold,
+              style: AppTextStyles.roboto24SemiBold(context),
             ),
             SizedBox(height: AppMeasures.gap72),
             CustomTextField(
@@ -78,7 +78,7 @@ class AuthLayout extends StatelessWidget {
             Center(
               child: Text(
                 S.of(context).orSingUpWithSocialAccount,
-                style: AppTextStyles.roboto14Medium,
+                style: AppTextStyles.roboto14Medium(context),
               ),
             ),
             SizedBox(height: AppMeasures.gap20),
@@ -94,12 +94,12 @@ class AuthLayout extends StatelessWidget {
                 textAlign: TextAlign.center,
                 text: TextSpan(
                   text: S.of(context).bySigningUpYouAgreeToOur,
-                  style: AppTextStyles.roboto14Regular
+                  style: AppTextStyles.roboto14Regular(context)
                       .copyWith(color: Colors.black),
                   children: [
                     TextSpan(
                       text: S.of(context).termsOfUse,
-                      style: AppTextStyles.roboto14Regular.copyWith(
+                      style: AppTextStyles.roboto14Regular(context).copyWith(
                         color: Colors.black,
                         decoration: TextDecoration.underline,
                         fontWeight: FontWeight.bold,
@@ -111,7 +111,7 @@ class AuthLayout extends StatelessWidget {
                     ),
                     TextSpan(
                       text: S.of(context).privacyPolicy,
-                      style: AppTextStyles.roboto14Regular.copyWith(
+                      style: AppTextStyles.roboto14Regular(context).copyWith(
                         color: Colors.black,
                         decoration: TextDecoration.underline,
                         fontWeight: FontWeight.bold,

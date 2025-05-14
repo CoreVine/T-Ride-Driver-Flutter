@@ -21,7 +21,7 @@ class ResetPasswordDialog extends StatelessWidget {
         SizedBox(height: AppMeasures.gap24,),
         Text(
           S.of(context).passwordSetSuccessfully,
-          style: AppTextStyles.roboto16Regular,
+          style: AppTextStyles.roboto16Regular(context),
         ),
       ],
     ).paddingSymmetric(horizontal: 20.w , vertical: 20.h);

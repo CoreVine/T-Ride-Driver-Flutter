@@ -42,7 +42,7 @@ class ResetPasswordScreen extends StatelessWidget {
                     SizedBox(height: AppMeasures.gap24),
                     Text(
                       S.of(context).resetPassword,
-                      style: AppTextStyles.roboto24SemiBold,
+                      style: AppTextStyles.roboto24SemiBold(context),
                     ),
                     SizedBox(height: AppMeasures.gap48),
                     CustomTextField(

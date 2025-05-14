@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:tride/core/theming/app_assets.dart';
+import 'package:tride/core/theming/app_colors.dart';
 import 'package:tride/generated/l10n.dart';
 
 import '../../../../../core/routing/routes.dart';
@@ -44,10 +46,12 @@ class LoginScreen extends StatelessWidget {
                       Navigator.pushNamed(context, Routes.forgetPasswordScreen);
                     },
                     child: Padding(
-                      padding: const EdgeInsets.only(top: 12.0),
+                      padding: EdgeInsets.only(top: 12.0.h),
                       child: Text(
-                        S.of(context).forgetPassword,
-                        style: AppTextStyles.roboto14Medium,
+                        S.of(context).forget,
+                        style: AppTextStyles.roboto14Medium(context).copyWith(
+                          color: AppColors.darkGray
+                        ),
                       ),
                     ),
                   )

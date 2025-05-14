@@ -37,8 +37,7 @@ class CustomTextField extends StatelessWidget {
         children: [
           Text(
             labelText,
-            style: AppTextStyles.roboto14Medium
-                .copyWith(color: AppColors.darkGray),
+            style: AppTextStyles.roboto14Medium(context),
           ),
           SizedBox(height: 4.h),
           TextFormField(
@@ -47,11 +46,7 @@ class CustomTextField extends StatelessWidget {
             controller: textController,
             initialValue: initialValue,
             cursorColor: AppColors.orange,
-            style: TextStyle(
-              fontSize: 16.sp,
-              color: Colors.black,
-              fontWeight: FontWeight.w500,
-            ),
+            style: AppTextStyles.roboto18Medium(context),
             decoration: InputDecoration(
               hintText: hintText,
               hintStyle: TextStyle(
@@ -59,7 +54,6 @@ class CustomTextField extends StatelessWidget {
                 fontSize: 16.sp,
               ),
               isDense: true,
-              contentPadding: EdgeInsets.only(bottom: 8.h),
               border: UnderlineInputBorder(
                 borderSide: BorderSide(color: AppColors.gray),
               ),

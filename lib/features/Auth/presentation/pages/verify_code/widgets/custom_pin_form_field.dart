@@ -106,7 +106,7 @@ class _PinFormFieldState extends State<PinFormField> {
     hintText: widget.hintText ?? '',
     errorStyle: const TextStyle(fontSize: 0, height: 0),
     hintStyle: widget.textHintStyle ??
-        AppTextStyles.roboto14Medium,
+        AppTextStyles.roboto14Medium(context),
     contentPadding: EdgeInsets.zero,
     errorMaxLines: 1,
     errorBorder: OutlineInputBorder(

@@ -42,6 +42,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "firstOnBoardingTitle": MessageLookupByLibrary.simpleMessage(
       "انضم كسائق موثوق",
     ),
+    "forget": MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور"),
     "forgetPassword": MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور"),
     "google": MessageLookupByLibrary.simpleMessage("جوجل"),
     "login": MessageLookupByLibrary.simpleMessage("تسجيل دخول"),

@@ -40,6 +40,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "firstOnBoardingTitle": MessageLookupByLibrary.simpleMessage(
       "Join as a Trusted Driver",
     ),
+    "forget": MessageLookupByLibrary.simpleMessage("Forget"),
     "forgetPassword": MessageLookupByLibrary.simpleMessage("Forget password"),
     "google": MessageLookupByLibrary.simpleMessage("Google"),
     "login": MessageLookupByLibrary.simpleMessage("Login"),

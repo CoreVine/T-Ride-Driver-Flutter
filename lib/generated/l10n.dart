@@ -220,6 +220,11 @@ class S {
     );
   }
 
+  /// `Forget`
+  String get forget {
+    return Intl.message('Forget', name: 'forget', desc: '', args: []);
+  }
+
   /// `Send code`
   String get sendCode {
     return Intl.message('Send code', name: 'sendCode', desc: '', args: []);
