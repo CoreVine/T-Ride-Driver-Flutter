@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:tride/core/helpers/extensions.dart';
 import 'package:tride/core/helpers/padding_extension.dart';
+import 'package:tride/core/routing/routes.dart';
 import 'package:tride/core/widgets/custom_button.dart';
 import 'package:tride/features/Auth/presentation/cubit/auth_cubit.dart';
 
@@ -27,7 +29,8 @@ class ForgetPasswordScreen extends StatelessWidget {
             children: [
               GestureDetector(
                 onTap: () {
-                  Navigator.pop(context);
+                  cubit.returnBack();
+                  context.pushReplacementNamed(Routes.loginScreen);
                 },
                 child: Text(
                   S.of(context).back,
@@ -50,7 +53,9 @@ class ForgetPasswordScreen extends StatelessWidget {
           SizedBox(height: AppMeasures.gap48),
           CustomButton(
             text: S.of(context).sendCode,
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pushNamed(context, Routes.verifyCode);
+            },
             yPadding: 15.h,
           )
         ],

@@ -24,5 +24,12 @@
   "sendCode": "Send code",
   "back": "back",
   "emailVerification": "Email verification",
-  "enterCode": "Enter code"
+  "enterCode": "Enter code",
+  "confirm": "Confirm",
+  "resendTheCode": "Resend the code",
+  "resetPassword": "Reset password",
+  "newPassword": "New password",
+  "confirmPassword": "Confirm password",
+  "setPassword" : "Set password",
+  "passwordSetSuccessfully" : "Password set successfully"
 }

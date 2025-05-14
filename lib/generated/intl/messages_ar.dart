@@ -27,6 +27,10 @@ class MessageLookup extends MessageLookupByLibrary {
     "bySigningUpYouAgreeToOur": MessageLookupByLibrary.simpleMessage(
       "تسجيلك, فإنك توافق على",
     ),
+    "confirm": MessageLookupByLibrary.simpleMessage("تأكيد"),
+    "confirmPassword": MessageLookupByLibrary.simpleMessage(
+      "تاكيد كلمة المرور",
+    ),
     "emailVerification": MessageLookupByLibrary.simpleMessage(
       "التحقق من البريد الإلكتروني",
     ),
@@ -41,13 +45,21 @@ class MessageLookup extends MessageLookupByLibrary {
     "forgetPassword": MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور"),
     "google": MessageLookupByLibrary.simpleMessage("جوجل"),
     "login": MessageLookupByLibrary.simpleMessage("تسجيل دخول"),
+    "newPassword": MessageLookupByLibrary.simpleMessage("كلمة المرور الجديدة"),
     "next": MessageLookupByLibrary.simpleMessage("التالي"),
     "orSingUpWithSocialAccount": MessageLookupByLibrary.simpleMessage(
       "أو سجل باستخدام حساب اجتماعي",
     ),
     "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
+    "passwordSetSuccessfully": MessageLookupByLibrary.simpleMessage(
+      "تم تعيين كلمة المرور بنجاح",
+    ),
     "privacyPolicy": MessageLookupByLibrary.simpleMessage(
       "سياسة الخصوصية الخاصة بنا.",
+    ),
+    "resendTheCode": MessageLookupByLibrary.simpleMessage("إعادة إرسال الرمز"),
+    "resetPassword": MessageLookupByLibrary.simpleMessage(
+      "إعادة تعيين كلمة المرور القديمة",
     ),
     "secondOnBoardingDesc": MessageLookupByLibrary.simpleMessage(
       "عرض الطلبات القريبة، وقبول الرحلات، والبدء بسهولة",
@@ -56,6 +68,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "إدارة رحلات سهلة",
     ),
     "sendCode": MessageLookupByLibrary.simpleMessage("Send code"),
+    "setPassword": MessageLookupByLibrary.simpleMessage("تغيير كلمة المرور"),
     "signUp": MessageLookupByLibrary.simpleMessage("تسجيل حساب"),
     "skip": MessageLookupByLibrary.simpleMessage("تخطي"),
     "start": MessageLookupByLibrary.simpleMessage("ابدء"),

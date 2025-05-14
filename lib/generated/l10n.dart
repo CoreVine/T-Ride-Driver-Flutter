@@ -244,6 +244,71 @@ class S {
   String get enterCode {
     return Intl.message('Enter code', name: 'enterCode', desc: '', args: []);
   }
+
+  /// `Confirm`
+  String get confirm {
+    return Intl.message('Confirm', name: 'confirm', desc: '', args: []);
+  }
+
+  /// `Resend the code`
+  String get resendTheCode {
+    return Intl.message(
+      'Resend the code',
+      name: 'resendTheCode',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Reset password`
+  String get resetPassword {
+    return Intl.message(
+      'Reset password',
+      name: 'resetPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `New password`
+  String get newPassword {
+    return Intl.message(
+      'New password',
+      name: 'newPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Confirm password`
+  String get confirmPassword {
+    return Intl.message(
+      'Confirm password',
+      name: 'confirmPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Set password`
+  String get setPassword {
+    return Intl.message(
+      'Set password',
+      name: 'setPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Password set successfully`
+  String get passwordSetSuccessfully {
+    return Intl.message(
+      'Password set successfully',
+      name: 'passwordSetSuccessfully',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

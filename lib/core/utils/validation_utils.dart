@@ -43,9 +43,29 @@ class ValidationUtils {
     return null;
   }
 
+  String? validateConfirmPassword(String? value, String password) {
+    if (value == null || value.isEmpty) {
+      return 'Please confirm your password';
+    }
+    if (value != password) {
+      return 'Passwords do not match';
+    }
+    return null;
+  }
+
   String? validateAddress(String? value) {
     if (value == null || value.isEmpty) {
       return 'Please enter your address';
+    }
+    return null;
+  }
+
+  String? validateVerificationCodeDigit(String? value) {
+    if (value == null || value.isEmpty) {
+      return '•';
+    }
+    if (!RegExp(r'^\d$').hasMatch(value)) {
+      return '•';
     }
     return null;
   }

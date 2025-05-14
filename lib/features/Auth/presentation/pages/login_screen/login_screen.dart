@@ -55,7 +55,7 @@ class LoginScreen extends StatelessWidget {
                     icon: cubit.isPasswordObscure
                         ? Icon(Icons.visibility)
                         : Icon(Icons.visibility_off),
-                    onPressed: () => cubit.changeVisibility(),
+                    onPressed: () => cubit.changePasswordVisibility(),
                   ),
             validator: (value) => ValidationUtils().validatePassword(value),
           );

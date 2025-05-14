@@ -24,6 +24,13 @@
   "forgetPassword": "نسيت كلمة المرور",
   "sendCode": "Send code",
   "back": "رجوع",
-  "emailVerification" : "التحقق من البريد الإلكتروني",
-  "enterCode" : "أدخل الرمز"
+  "emailVerification": "التحقق من البريد الإلكتروني",
+  "enterCode": "أدخل الرمز",
+  "confirm": "تأكيد",
+  "resendTheCode": "إعادة إرسال الرمز",
+  "resetPassword": "إعادة تعيين كلمة المرور القديمة",
+  "newPassword": "كلمة المرور الجديدة",
+  "confirmPassword": "تاكيد كلمة المرور",
+  "setPassword" : "تغيير كلمة المرور",
+  "passwordSetSuccessfully" : "تم تعيين كلمة المرور بنجاح"
 }
