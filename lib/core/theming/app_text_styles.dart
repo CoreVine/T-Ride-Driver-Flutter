@@ -144,6 +144,11 @@ class AppTextStyles {
     fontWeight: AppFontWeights.fontWeightRegular,
     fontSize: AppTextSizes.fontsize16,
   );
+  static final TextStyle roboto16Medium = baseStyle(
+    fontFamily: AppFontFamilies.fontFamilyRoboto,
+    fontWeight: AppFontWeights.fontWeightMedium,
+    fontSize: AppTextSizes.fontsize16,
+  );
   static final TextStyle roboto12Medium = baseStyle(
     fontFamily: AppFontFamilies.fontFamilyRoboto,
     fontWeight: AppFontWeights.fontWeightMedium,

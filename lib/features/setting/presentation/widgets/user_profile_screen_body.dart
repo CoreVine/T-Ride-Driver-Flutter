@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:tride/core/helpers/spacing.dart';
+import 'package:tride/core/theming/app_colors.dart';
+import 'package:tride/core/theming/app_text_styles.dart';
+import 'package:tride/core/widgets/custom_button.dart';
 
-import 'edit_profile_action_section.dart';
 import 'pick_image_widget.dart';
 import 'user_data_form_section.dart';
 
@@ -11,17 +11,8 @@ class UserProfileScreenBody extends StatelessWidget {
   final TextEditingController userNameController = TextEditingController(
     text: "Hayam Tarek",
   );
-  final TextEditingController emailController = TextEditingController(
-    text: "Hayam@gmail.com",
-  );
-  final TextEditingController passwordController = TextEditingController(
-    text: "888888",
-  );
   final TextEditingController phoneController = TextEditingController(
     text: "0123456789",
-  );
-  final TextEditingController addressController = TextEditingController(
-    text: "Mokkatam",
   );
   final GlobalKey<FormState> formKey = GlobalKey();
 
@@ -32,27 +23,25 @@ class UserProfileScreenBody extends StatelessWidget {
         padding: const EdgeInsets.symmetric(vertical: 30, horizontal: 16),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            mediumHorizontalSpacer,
+            Text("Captain's information", style: AppTextStyles.robotoW600S24),
+            SizedBox(height: 32),
             const PickImageWidget(),
-            SizedBox(height: 46.h),
+            SizedBox(height: 32),
             UserDataFormSection(
               userNameController: userNameController,
-              emailController: emailController,
-              passwordController: passwordController,
               phoneController: phoneController,
-              addressController: addressController,
               formKey: formKey,
             ),
-            SizedBox(height: 46.h),
-            EditProfileActionsSection(
-              userNameController: userNameController,
-              emailController: emailController,
-              passwordController: passwordController,
-              phoneController: phoneController,
-              addressController: addressController,
-              formKey: formKey,
+            SizedBox(height: 48),
+            CustomButton(
+              text: "Save",
+              bgColor: AppColors.orange,
+              textColor: AppColors.white,
+              onPressed: () {
+                formKey.currentState!.validate();
+              },
             ),
           ],
         ),

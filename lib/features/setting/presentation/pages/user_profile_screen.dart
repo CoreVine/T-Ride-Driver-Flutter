@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:tride/core/helpers/extensions.dart';
+import 'package:tride/core/widgets/custom_app_bar.dart';
 
-import '../widgets/user_profile_app_bar.dart';
 import '../widgets/user_profile_screen_body.dart';
 
 class UserProfileScreen extends StatelessWidget {
@@ -9,9 +10,11 @@ class UserProfileScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const PreferredSize(
-        preferredSize: Size.fromHeight(40),
-        child: UserProfileAppBar(),
+      appBar: customAppBar(
+        actionTitle: 'Back',
+        onTap: () {
+          context.pop();
+        },
       ),
       body: UserProfileScreenBody(),
     );

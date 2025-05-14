@@ -1,91 +1,76 @@
 import 'package:flutter/material.dart';
-import 'package:tride/core/helpers/extensions.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:tride/core/utils/governorates.dart';
+import 'package:tride/core/utils/validation_utils.dart';
+import 'package:tride/core/utils/work_areas.dart';
+import 'package:tride/core/widgets/input_field_widget.dart';
+import 'package:tride/features/setting/presentation/widgets/custom_dropdown_button.dart';
+import 'package:tride/features/setting/presentation/widgets/gender_widget.dart';
 
-import 'input_field_widget.dart';
-
-class UserDataFormSection extends StatelessWidget {
+class UserDataFormSection extends StatefulWidget {
   const UserDataFormSection({
     super.key,
     required this.userNameController,
-    required this.emailController,
-    required this.passwordController,
     required this.phoneController,
-    required this.addressController,
     required this.formKey,
   });
   final TextEditingController userNameController;
-  final TextEditingController emailController;
-  final TextEditingController passwordController;
   final TextEditingController phoneController;
-  final TextEditingController addressController;
   final GlobalKey<FormState> formKey;
+
+  @override
+  State<UserDataFormSection> createState() => _UserDataFormSectionState();
+}
+
+class _UserDataFormSectionState extends State<UserDataFormSection> {
+  String? selectedGovernorate = 'Al-Fayoum';
+  String? selectedWorkArea = '24 Shobra El Namla St..';
 
   @override
   Widget build(BuildContext context) {
     return Form(
-      key: formKey,
+      key: widget.formKey,
       child: Column(
+        spacing: 24.h,
         children: [
           InputFieldWidget(
-            textController: userNameController,
-            labelText: "User name",
+            textController: widget.userNameController,
+            labelText: "Captain's name",
             keyboardType: TextInputType.text,
-            validator: (value) {
-              if (value!.isNullOrEmpty()) {
-                return "Enter a valid user name";
-              } else {
-                return null;
-              }
-            },
+            validator: ValidationUtils.validateUsername,
           ),
           InputFieldWidget(
-            textController: emailController,
-            labelText: "Email",
-            keyboardType: TextInputType.emailAddress,
-            validator: (value) {
-              if (value.isNullOrEmpty()) {
-                return "Enter a valid Email";
-              } else {
-                return null;
-              }
-            },
-          ),
-          InputFieldWidget(
-            textController: passwordController,
-            labelText: "Password",
-            keyboardType: TextInputType.visiblePassword,
-            obscureText: true,
-            validator: (value) {
-              if (value.isNullOrEmpty()) {
-                return "Enter a valid password";
-              } else {
-                return null;
-              }
-            },
-          ),
-          InputFieldWidget(
-            textController: phoneController,
+            textController: widget.phoneController,
             labelText: "Phone",
             keyboardType: TextInputType.phone,
-            validator: (value) {
-              if (value.isNullOrEmpty()) {
-                return "Enter a valid phone";
-              } else {
-                return null;
-              }
-            },
+            validator: ValidationUtils.validatePhoneNumber,
           ),
-          InputFieldWidget(
-            textController: addressController,
-            labelText: "Address",
-            validator: (value) {
-              if (value.isNullOrEmpty()) {
-                return "Enter a valid address";
-              } else {
-                return null;
-              }
-            },
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              CustomDropdownButton(
+                label: "Governorate",
+                items: governorates,
+                value: selectedGovernorate,
+                onChanged: (String? newValue) {
+                  setState(() {
+                    selectedGovernorate = newValue;
+                  });
+                },
+              ),
+              CustomDropdownButton(
+                label: "Work Area",
+                items: workAreas,
+                value: selectedWorkArea,
+                onChanged: (String? newValue) {
+                  setState(() {
+                    selectedWorkArea = newValue;
+                  });
+                },
+              ),
+            ],
           ),
+          GenderWidget(),
         ],
       ),
     );

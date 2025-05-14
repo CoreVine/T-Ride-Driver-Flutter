@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:tride/core/theming/app_colors.dart';
 import 'package:tride/core/theming/app_text_styles.dart';
 
@@ -30,59 +29,58 @@ class InputFieldWidget extends StatefulWidget {
 class _InputFieldWidgetState extends State<InputFieldWidget> {
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(8.0),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Padding(
-            padding: EdgeInsets.symmetric(horizontal: 8.0.w),
-            child: Text(widget.labelText, style: AppTextStyles.roboto14Regular),
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          widget.labelText,
+          style: AppTextStyles.roboto12Medium.copyWith(
+            color: AppColors.darkGray,
           ),
-          TextFormField(
-            keyboardType: widget.keyboardType,
-            obscureText: widget.obscureText,
-            controller: widget.textController,
-            decoration: InputDecoration(
-              hintText: widget.labelText,
-              hintStyle: TextStyle(color: AppColors.black),
-              border: UnderlineInputBorder(
-                borderSide: BorderSide(color: AppColors.silver),
-              ),
-              focusedBorder: UnderlineInputBorder(
-                borderSide: BorderSide(color: AppColors.orange),
-              ),
-              enabledBorder: UnderlineInputBorder(
-                borderSide: BorderSide(color: AppColors.silver),
-              ),
-              errorBorder: UnderlineInputBorder(
-                borderSide: BorderSide(color: AppColors.red),
-              ),
-              contentPadding: const EdgeInsets.symmetric(
-                horizontal: 16,
-                vertical: 12,
-              ),
-              suffixIcon:
-                  widget.showObscureIcon
-                      ? IconButton(
-                        icon: Icon(
-                          widget.obscureText
-                              ? Icons.visibility_outlined
-                              : Icons.visibility_off_outlined,
-                          color: AppColors.black,
-                        ),
-                        onPressed: () {
-                          setState(() {
-                            widget.obscureText = !widget.obscureText;
-                          });
-                        },
-                      )
-                      : widget.suffixIcon,
+        ),
+        TextFormField(
+          keyboardType: widget.keyboardType,
+          obscureText: widget.obscureText,
+          controller: widget.textController,
+          decoration: InputDecoration(
+            hintText: widget.labelText,
+            hintStyle: TextStyle(color: AppColors.black),
+            border: UnderlineInputBorder(
+              borderSide: BorderSide(color: AppColors.silver),
             ),
-            validator: widget.validator,
+            focusedBorder: UnderlineInputBorder(
+              borderSide: BorderSide(color: AppColors.orange),
+            ),
+            enabledBorder: UnderlineInputBorder(
+              borderSide: BorderSide(color: AppColors.silver),
+            ),
+            errorBorder: UnderlineInputBorder(
+              borderSide: BorderSide(color: AppColors.red),
+            ),
+            contentPadding: const EdgeInsets.symmetric(
+              horizontal: 16,
+              vertical: 12,
+            ),
+            suffixIcon:
+                widget.showObscureIcon
+                    ? IconButton(
+                      icon: Icon(
+                        widget.obscureText
+                            ? Icons.visibility_outlined
+                            : Icons.visibility_off_outlined,
+                        color: AppColors.black,
+                      ),
+                      onPressed: () {
+                        setState(() {
+                          widget.obscureText = !widget.obscureText;
+                        });
+                      },
+                    )
+                    : widget.suffixIcon,
           ),
-        ],
-      ),
+          validator: widget.validator,
+        ),
+      ],
     );
   }
 }
