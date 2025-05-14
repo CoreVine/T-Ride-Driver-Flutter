@@ -20,8 +20,7 @@ class AppColors {
   static Color darkBlack = Color(0XFF414141);
   static Color blue = Color(0XFF48A0FF);
   static Color blue30 = Color(0X4D48A0FF);
-  static const Color text = Color(0xFF282828);
-  static const Color transparent = Colors.transparent;
+  static Color transparent =Colors.transparent;// ← يمكن إضافتها إذا احتجت
 
   // Optional: Add a method to create a MaterialColor from a single Color
   static MaterialColor createMaterialColor(Color color) {
