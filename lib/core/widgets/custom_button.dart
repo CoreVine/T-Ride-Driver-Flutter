@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+   import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:tride/core/theming/app_colors.dart';
 import 'package:tride/core/theming/app_paddings.dart';
@@ -34,7 +34,7 @@ class CustomButton extends StatelessWidget {
       child: ElevatedButton(
         onPressed: onPressed,
         style: ElevatedButton.styleFrom(
-          backgroundColor: bgColor ?? AppColors.primary,
+          backgroundColor: bgColor ?? AppColors.orange  ,
           padding: EdgeInsets.symmetric(
             horizontal:
                 xPadding != null ? xPadding!.w : AppPaddings.gapPadding8,
@@ -47,12 +47,12 @@ class CustomButton extends StatelessWidget {
         ),
         child:
             isLoading
-                ? const Center(
+                ? Center(
                   child: SizedBox(
                     width: 24,
                     height: 24,
                     child: CircularProgressIndicator(
-                      color: AppColors.background,
+                      color: AppColors.transparent,
                       strokeWidth: AppStrokes.strokeVlg,
                     ),
                   ),
@@ -60,10 +60,7 @@ class CustomButton extends StatelessWidget {
                 : Text(
                   text,
                   style:
-                      textStyle ??
-                      AppTextStyles.poppins16Regular.copyWith(
-                        color: AppColors.background,
-                      ),
+                      textStyle
                 ),
       ),
     );

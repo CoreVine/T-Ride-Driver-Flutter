@@ -1,14 +1,10 @@
 class AppTextSizes {
-  static const double fontsize8 = 8;
-  static const double fontsize10 = 10;
-  static const double fontsize12 = 12;
-  static const double fontsize14 = 14;
-  static const double fontsize16 = 16;
-  static const double fontsize18 = 18;
-  static const double fontsize20 = 20;
-  static const double fontsize22 = 22;
-  static const double fontsize26 = 26;
-  static const double fontsize32 = 32;
-  static const double fontsize36 = 36;
-  static const double fontsize40 = 40;
+  static double fontSize8 = 8;
+  static double fontSize10 = 10;
+  static double fontSize12 = 12;
+  static double fontSize14 = 14;
+  static double fontSize16 = 16;
+  static double fontSize18 = 18;
+  static double fontSize20 = 20;
+  static double fontSize24 = 24;
 }
