@@ -20,5 +20,9 @@
   "termsOfUse": "Terms of Use",
   "and": " and ",
   "privacyPolicy": "Privacy Policy",
-  "forgetPassword" : "Forget"
+  "forgetPassword": "Forget password",
+  "sendCode": "Send code",
+  "back": "back",
+  "emailVerification": "Email verification",
+  "enterCode": "Enter code"
 }

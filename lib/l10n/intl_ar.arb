@@ -21,5 +21,9 @@
   "termsOfUse": "شروط الاستخدام ",
   "and": " و ",
   "privacyPolicy": "سياسة الخصوصية الخاصة بنا.",
-  "forgetPassword" : "نسيت كلمة المرور"
+  "forgetPassword": "نسيت كلمة المرور",
+  "sendCode": "Send code",
+  "back": "رجوع",
+  "emailVerification" : "التحقق من البريد الإلكتروني",
+  "enterCode" : "أدخل الرمز"
 }

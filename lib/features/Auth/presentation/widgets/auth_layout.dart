@@ -118,7 +118,6 @@ class AuthLayout extends StatelessWidget {
                       ),
                       recognizer: TapGestureRecognizer()..onTap = () {},
                     ),
-                    TextSpan(text: '.'),
                   ],
                 ),
               ),

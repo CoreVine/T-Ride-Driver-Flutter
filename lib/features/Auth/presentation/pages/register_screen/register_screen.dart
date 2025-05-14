@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../../core/routing/routes.dart';
-import '../../../../core/theming/app_assets.dart';
-import '../../../../core/theming/app_text_styles.dart';
-import '../../../../core/utils/validation_utils.dart';
-import '../../../../core/widgets/input_field_widget.dart';
-import '../../../../generated/l10n.dart';
-import '../cubit/auth_cubit.dart';
-import '../widgets/auth_layout.dart';
-import '../widgets/social_auth_button.dart';
+import '../../../../../core/routing/routes.dart';
+import '../../../../../core/theming/app_assets.dart';
+import '../../../../../core/theming/app_text_styles.dart';
+import '../../../../../core/utils/validation_utils.dart';
+import '../../../../../core/widgets/input_field_widget.dart';
+import '../../../../../generated/l10n.dart';
+import '../../cubit/auth_cubit.dart';
+import '../../widgets/auth_layout.dart';
+import '../../widgets/social_auth_button.dart';
 
 class RegisterScreen extends StatelessWidget {
   const RegisterScreen({super.key});

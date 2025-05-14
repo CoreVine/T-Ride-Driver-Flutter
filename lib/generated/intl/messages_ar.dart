@@ -23,9 +23,14 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
     "and": MessageLookupByLibrary.simpleMessage(" و "),
+    "back": MessageLookupByLibrary.simpleMessage("رجوع"),
     "bySigningUpYouAgreeToOur": MessageLookupByLibrary.simpleMessage(
       "تسجيلك, فإنك توافق على",
     ),
+    "emailVerification": MessageLookupByLibrary.simpleMessage(
+      "التحقق من البريد الإلكتروني",
+    ),
+    "enterCode": MessageLookupByLibrary.simpleMessage("أدخل الرمز"),
     "facebook": MessageLookupByLibrary.simpleMessage("فيسبوك"),
     "firstOnBoardingDesc": MessageLookupByLibrary.simpleMessage(
       "كن جزءًا من فريقنا وساعد في نقل الأطفال بأمان واطمئنان.",
@@ -50,6 +55,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "secondOnBoardingTitle": MessageLookupByLibrary.simpleMessage(
       "إدارة رحلات سهلة",
     ),
+    "sendCode": MessageLookupByLibrary.simpleMessage("Send code"),
     "signUp": MessageLookupByLibrary.simpleMessage("تسجيل حساب"),
     "skip": MessageLookupByLibrary.simpleMessage("تخطي"),
     "start": MessageLookupByLibrary.simpleMessage("ابدء"),

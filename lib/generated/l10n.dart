@@ -210,9 +210,39 @@ class S {
     );
   }
 
-  /// `Forget`
+  /// `Forget password`
   String get forgetPassword {
-    return Intl.message('Forget', name: 'forgetPassword', desc: '', args: []);
+    return Intl.message(
+      'Forget password',
+      name: 'forgetPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Send code`
+  String get sendCode {
+    return Intl.message('Send code', name: 'sendCode', desc: '', args: []);
+  }
+
+  /// `back`
+  String get back {
+    return Intl.message('back', name: 'back', desc: '', args: []);
+  }
+
+  /// `Email verification`
+  String get emailVerification {
+    return Intl.message(
+      'Email verification',
+      name: 'emailVerification',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter code`
+  String get enterCode {
+    return Intl.message('Enter code', name: 'enterCode', desc: '', args: []);
   }
 }
 

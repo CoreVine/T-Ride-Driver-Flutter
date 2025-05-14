@@ -23,9 +23,14 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
     "and": MessageLookupByLibrary.simpleMessage(" and "),
+    "back": MessageLookupByLibrary.simpleMessage("back"),
     "bySigningUpYouAgreeToOur": MessageLookupByLibrary.simpleMessage(
       "By signing up, you agree to our ",
     ),
+    "emailVerification": MessageLookupByLibrary.simpleMessage(
+      "Email verification",
+    ),
+    "enterCode": MessageLookupByLibrary.simpleMessage("Enter code"),
     "facebook": MessageLookupByLibrary.simpleMessage("Facebook"),
     "firstOnBoardingDesc": MessageLookupByLibrary.simpleMessage(
       "Become part of our team and help transport children safely and securely.",
@@ -33,7 +38,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "firstOnBoardingTitle": MessageLookupByLibrary.simpleMessage(
       "Join as a Trusted Driver",
     ),
-    "forgetPassword": MessageLookupByLibrary.simpleMessage("Forget"),
+    "forgetPassword": MessageLookupByLibrary.simpleMessage("Forget password"),
     "google": MessageLookupByLibrary.simpleMessage("Google"),
     "login": MessageLookupByLibrary.simpleMessage("Login"),
     "next": MessageLookupByLibrary.simpleMessage("Next"),
@@ -48,6 +53,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "secondOnBoardingTitle": MessageLookupByLibrary.simpleMessage(
       "Easy Ride Management",
     ),
+    "sendCode": MessageLookupByLibrary.simpleMessage("Send code"),
     "signUp": MessageLookupByLibrary.simpleMessage("Sign Up"),
     "skip": MessageLookupByLibrary.simpleMessage("Skip"),
     "start": MessageLookupByLibrary.simpleMessage("Start"),
