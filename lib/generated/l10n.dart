@@ -64,6 +64,256 @@ class S {
       args: [],
     );
   }
+
+  /// `Join as a Trusted Driver`
+  String get firstOnBoardingTitle {
+    return Intl.message(
+      'Join as a Trusted Driver',
+      name: 'firstOnBoardingTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Become part of our team and help transport children safely and securely.`
+  String get firstOnBoardingDesc {
+    return Intl.message(
+      'Become part of our team and help transport children safely and securely.',
+      name: 'firstOnBoardingDesc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Easy Ride Management`
+  String get secondOnBoardingTitle {
+    return Intl.message(
+      'Easy Ride Management',
+      name: 'secondOnBoardingTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `View nearby requests, accept rides, and get started seamlessly.`
+  String get secondOnBoardingDesc {
+    return Intl.message(
+      'View nearby requests, accept rides, and get started seamlessly.',
+      name: 'secondOnBoardingDesc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Safety and Trust Above All`
+  String get thirdOnBoardingTitle {
+    return Intl.message(
+      'Safety and Trust Above All',
+      name: 'thirdOnBoardingTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Follow safety protocols to ensure the comfort and security of families.`
+  String get thirdOnBoardingDesc {
+    return Intl.message(
+      'Follow safety protocols to ensure the comfort and security of families.',
+      name: 'thirdOnBoardingDesc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Next`
+  String get next {
+    return Intl.message('Next', name: 'next', desc: '', args: []);
+  }
+
+  /// `Skip`
+  String get skip {
+    return Intl.message('Skip', name: 'skip', desc: '', args: []);
+  }
+
+  /// `Start`
+  String get start {
+    return Intl.message('Start', name: 'start', desc: '', args: []);
+  }
+
+  /// `Your Email`
+  String get yourEmail {
+    return Intl.message('Your Email', name: 'yourEmail', desc: '', args: []);
+  }
+
+  /// `Password`
+  String get password {
+    return Intl.message('Password', name: 'password', desc: '', args: []);
+  }
+
+  /// `Sign Up`
+  String get signUp {
+    return Intl.message('Sign Up', name: 'signUp', desc: '', args: []);
+  }
+
+  /// `Login`
+  String get login {
+    return Intl.message('Login', name: 'login', desc: '', args: []);
+  }
+
+  /// `Or sign up with social account`
+  String get orSingUpWithSocialAccount {
+    return Intl.message(
+      'Or sign up with social account',
+      name: 'orSingUpWithSocialAccount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Facebook`
+  String get facebook {
+    return Intl.message('Facebook', name: 'facebook', desc: '', args: []);
+  }
+
+  /// `Google`
+  String get google {
+    return Intl.message('Google', name: 'google', desc: '', args: []);
+  }
+
+  /// `By signing up, you agree to our `
+  String get bySigningUpYouAgreeToOur {
+    return Intl.message(
+      'By signing up, you agree to our ',
+      name: 'bySigningUpYouAgreeToOur',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Terms of Use`
+  String get termsOfUse {
+    return Intl.message('Terms of Use', name: 'termsOfUse', desc: '', args: []);
+  }
+
+  /// ` and `
+  String get and {
+    return Intl.message(' and ', name: 'and', desc: '', args: []);
+  }
+
+  /// `Privacy Policy`
+  String get privacyPolicy {
+    return Intl.message(
+      'Privacy Policy',
+      name: 'privacyPolicy',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Forget password`
+  String get forgetPassword {
+    return Intl.message(
+      'Forget password',
+      name: 'forgetPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Forget`
+  String get forget {
+    return Intl.message('Forget', name: 'forget', desc: '', args: []);
+  }
+
+  /// `Send code`
+  String get sendCode {
+    return Intl.message('Send code', name: 'sendCode', desc: '', args: []);
+  }
+
+  /// `back`
+  String get back {
+    return Intl.message('back', name: 'back', desc: '', args: []);
+  }
+
+  /// `Email verification`
+  String get emailVerification {
+    return Intl.message(
+      'Email verification',
+      name: 'emailVerification',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter code`
+  String get enterCode {
+    return Intl.message('Enter code', name: 'enterCode', desc: '', args: []);
+  }
+
+  /// `Confirm`
+  String get confirm {
+    return Intl.message('Confirm', name: 'confirm', desc: '', args: []);
+  }
+
+  /// `Resend the code`
+  String get resendTheCode {
+    return Intl.message(
+      'Resend the code',
+      name: 'resendTheCode',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Reset password`
+  String get resetPassword {
+    return Intl.message(
+      'Reset password',
+      name: 'resetPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `New password`
+  String get newPassword {
+    return Intl.message(
+      'New password',
+      name: 'newPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Confirm password`
+  String get confirmPassword {
+    return Intl.message(
+      'Confirm password',
+      name: 'confirmPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Set password`
+  String get setPassword {
+    return Intl.message(
+      'Set password',
+      name: 'setPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Password set successfully`
+  String get passwordSetSuccessfully {
+    return Intl.message(
+      'Password set successfully',
+      name: 'passwordSetSuccessfully',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

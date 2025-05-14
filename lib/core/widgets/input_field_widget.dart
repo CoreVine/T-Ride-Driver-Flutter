@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:tride/core/theming/app_text_styles.dart';
 
-class InputFieldWidget extends StatelessWidget {
-  const InputFieldWidget({
+import '../theming/app_colors.dart';
+
+class CustomTextField extends StatelessWidget {
+  const CustomTextField({
     super.key,
     required this.textController,
     required this.labelText,
@@ -11,6 +13,9 @@ class InputFieldWidget extends StatelessWidget {
     this.keyboardType,
     required this.validator,
     this.suffixIcon,
+    this.hintText,
+    this.initialValue,
+    this.onSuffixButton,
   });
 
   final TextEditingController textController;
@@ -19,45 +24,52 @@ class InputFieldWidget extends StatelessWidget {
   final Widget? suffixIcon;
   final TextInputType? keyboardType;
   final String? Function(String? value) validator;
+  final String? hintText;
+  final String? initialValue;
+  final VoidCallback? onSuffixButton;
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(8.0),
+      padding: EdgeInsets.symmetric(vertical: 8.0.h),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Padding(padding: EdgeInsets.symmetric(horizontal: 8.0.w), child: Text(labelText)),
-          Container(
-            decoration: BoxDecoration(color: const Color(0x0f282828), borderRadius: BorderRadius.circular(12.0)),
-            child: TextFormField(
-              keyboardType: keyboardType,
-              obscureText: isObscure ?? false,
-              controller: textController,
-              decoration: InputDecoration(
-                hintText: labelText,
-                hintStyle: const TextStyle(color: Colors.black12),
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(12.0),
-                  borderSide: const BorderSide(color: Colors.transparent),
-                ),
-                focusedBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(12.0),
-                  borderSide: const BorderSide(color: Colors.blue),
-                ),
-                enabledBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(12.0),
-                  borderSide: const BorderSide(color: Colors.transparent),
-                ),
-                errorBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(12.0),
-                  borderSide: const BorderSide(color: Colors.red),
-                ),
-                contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
-                suffixIcon: suffixIcon,
+          Text(
+            labelText,
+            style: AppTextStyles.roboto14Medium(context),
+          ),
+          SizedBox(height: 4.h),
+          TextFormField(
+            keyboardType: keyboardType,
+            obscureText: isObscure ?? false,
+            controller: textController,
+            initialValue: initialValue,
+            cursorColor: AppColors.orange,
+            style: AppTextStyles.roboto18Medium(context),
+            decoration: InputDecoration(
+              hintText: hintText,
+              hintStyle: TextStyle(
+                color: Colors.grey[400],
+                fontSize: 16.sp,
               ),
-              validator: validator,
+              isDense: true,
+              border: UnderlineInputBorder(
+                borderSide: BorderSide(color: AppColors.gray),
+              ),
+              focusedBorder: UnderlineInputBorder(
+                borderSide: BorderSide(color: AppColors.orange, width: 2.w),
+              ),
+              enabledBorder: UnderlineInputBorder(
+                borderSide: BorderSide(color: AppColors.gray),
+              ),
+              errorBorder: UnderlineInputBorder(
+                borderSide: BorderSide(color: AppColors.red),
+              ),
+              suffixIcon: onSuffixButton != null ? GestureDetector(
+                  onTap: onSuffixButton, child: suffixIcon) : suffixIcon,
             ),
+            validator: validator,
           ),
         ],
       ),

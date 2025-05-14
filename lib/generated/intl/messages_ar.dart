@@ -22,8 +22,67 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+    "and": MessageLookupByLibrary.simpleMessage(" و "),
+    "back": MessageLookupByLibrary.simpleMessage("رجوع"),
+    "bySigningUpYouAgreeToOur": MessageLookupByLibrary.simpleMessage(
+      "تسجيلك, فإنك توافق على",
+    ),
+    "confirm": MessageLookupByLibrary.simpleMessage("تأكيد"),
+    "confirmPassword": MessageLookupByLibrary.simpleMessage(
+      "تاكيد كلمة المرور",
+    ),
+    "emailVerification": MessageLookupByLibrary.simpleMessage(
+      "التحقق من البريد الإلكتروني",
+    ),
+    "enterCode": MessageLookupByLibrary.simpleMessage("أدخل الرمز"),
+    "facebook": MessageLookupByLibrary.simpleMessage("فيسبوك"),
+    "firstOnBoardingDesc": MessageLookupByLibrary.simpleMessage(
+      "كن جزءًا من فريقنا وساعد في نقل الأطفال بأمان واطمئنان.",
+    ),
+    "firstOnBoardingTitle": MessageLookupByLibrary.simpleMessage(
+      "انضم كسائق موثوق",
+    ),
+    "forget": MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور"),
+    "forgetPassword": MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور"),
+    "google": MessageLookupByLibrary.simpleMessage("جوجل"),
+    "login": MessageLookupByLibrary.simpleMessage("تسجيل دخول"),
+    "newPassword": MessageLookupByLibrary.simpleMessage("كلمة المرور الجديدة"),
+    "next": MessageLookupByLibrary.simpleMessage("التالي"),
+    "orSingUpWithSocialAccount": MessageLookupByLibrary.simpleMessage(
+      "أو سجل باستخدام حساب اجتماعي",
+    ),
+    "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
+    "passwordSetSuccessfully": MessageLookupByLibrary.simpleMessage(
+      "تم تعيين كلمة المرور بنجاح",
+    ),
+    "privacyPolicy": MessageLookupByLibrary.simpleMessage(
+      "سياسة الخصوصية الخاصة بنا.",
+    ),
+    "resendTheCode": MessageLookupByLibrary.simpleMessage("إعادة إرسال الرمز"),
+    "resetPassword": MessageLookupByLibrary.simpleMessage(
+      "إعادة تعيين كلمة المرور القديمة",
+    ),
+    "secondOnBoardingDesc": MessageLookupByLibrary.simpleMessage(
+      "عرض الطلبات القريبة، وقبول الرحلات، والبدء بسهولة",
+    ),
+    "secondOnBoardingTitle": MessageLookupByLibrary.simpleMessage(
+      "إدارة رحلات سهلة",
+    ),
+    "sendCode": MessageLookupByLibrary.simpleMessage("Send code"),
+    "setPassword": MessageLookupByLibrary.simpleMessage("تغيير كلمة المرور"),
+    "signUp": MessageLookupByLibrary.simpleMessage("تسجيل حساب"),
+    "skip": MessageLookupByLibrary.simpleMessage("تخطي"),
+    "start": MessageLookupByLibrary.simpleMessage("ابدء"),
+    "termsOfUse": MessageLookupByLibrary.simpleMessage("شروط الاستخدام "),
+    "thirdOnBoardingDesc": MessageLookupByLibrary.simpleMessage(
+      "اتبع بروتوكولات السلامة لضمان راحة وأمان العائلات",
+    ),
+    "thirdOnBoardingTitle": MessageLookupByLibrary.simpleMessage(
+      "السلامة والثقة فوق كل شيء",
+    ),
     "welcome": MessageLookupByLibrary.simpleMessage(
       "مرحبًا بك في تطبيق T-Ride",
     ),
+    "yourEmail": MessageLookupByLibrary.simpleMessage("البريد الالكتروني"),
   };
 }

@@ -36,7 +36,8 @@ class CustomButton extends StatelessWidget {
         style: ElevatedButton.styleFrom(
           backgroundColor: bgColor ?? AppColors.orange,
           padding: EdgeInsets.symmetric(
-            horizontal: xPadding != null ? xPadding!.w : AppPaddings.gapPadding8,
+            horizontal:
+                xPadding != null ? xPadding!.w : AppPaddings.gapPadding8,
             vertical: yPadding != null ? yPadding!.h : AppPaddings.gapPadding8,
           ),
           shape: RoundedRectangleBorder(
@@ -44,16 +45,24 @@ class CustomButton extends StatelessWidget {
             side: BorderSide(color: AppColors.transparent, width: 1.5.sp),
           ),
         ),
-        child:
-            isLoading
-                ? Center(
-                  child: SizedBox(
-                    width: 24,
-                    height: 24,
-                    child: CircularProgressIndicator(color: AppColors.white, strokeWidth: AppStrokes.strokeVlg),
+        child: isLoading
+            ? Center(
+                child: SizedBox(
+                  width: 24,
+                  height: 24,
+                  child: CircularProgressIndicator(
+                    color: AppColors.white,
+                    strokeWidth: AppStrokes.strokeVlg,
                   ),
-                )
-                : Text(text, style: textStyle ?? AppTextStyles.roboto16SemiBold(context)),
+                ),
+              )
+            : Text(
+                text,
+                style: textStyle ??
+                    AppTextStyles.roboto16Regular(context).copyWith(
+                      color: AppColors.white,
+                    ),
+              ),
       ),
     );
   }
