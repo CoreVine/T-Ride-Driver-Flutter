@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:tride/core/theming/app_colors.dart';
 import 'package:tride/core/theming/app_text_styles.dart';
+import 'package:tride/generated/l10n.dart';
 
 class OTPWidget extends StatefulWidget {
   const OTPWidget({super.key});
@@ -41,7 +42,7 @@ class _OTPWidgetState extends State<OTPWidget> {
       spacing: 20,
       children: [
         Text(
-          "Enter code",
+          S.of(context).enter_code,
           style: AppTextStyles.roboto12Medium.copyWith(color: AppColors.silver),
         ),
         Center(

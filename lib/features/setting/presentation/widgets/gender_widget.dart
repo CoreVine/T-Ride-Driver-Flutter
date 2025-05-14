@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tride/core/theming/app_colors.dart';
 import 'package:tride/core/theming/app_text_styles.dart';
+import 'package:tride/generated/l10n.dart';
 
 class GenderWidget extends StatefulWidget {
   const GenderWidget({super.key});
@@ -18,7 +19,7 @@ class _GenderWidgetState extends State<GenderWidget> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          "Gender",
+          S.of(context).gender,
           style: AppTextStyles.roboto12Medium.copyWith(
             color: AppColors.darkGray,
           ),
@@ -32,7 +33,7 @@ class _GenderWidgetState extends State<GenderWidget> {
               onChanged: _onChooseMale,
               activeColor: AppColors.blue,
             ),
-            Text('Male', style: AppTextStyles.roboto16Medium),
+            Text(S.of(context).male, style: AppTextStyles.roboto16Medium),
             SizedBox(width: 24),
             Radio<String>(
               value: 'Female',
@@ -40,7 +41,7 @@ class _GenderWidgetState extends State<GenderWidget> {
               onChanged: _onChooseFemale,
               activeColor: AppColors.blue,
             ),
-            Text('Female', style: AppTextStyles.roboto16Medium),
+            Text(S.of(context).female, style: AppTextStyles.roboto16Medium),
           ],
         ),
       ],

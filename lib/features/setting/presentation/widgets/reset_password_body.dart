@@ -6,6 +6,7 @@ import 'package:tride/core/theming/app_text_styles.dart';
 import 'package:tride/core/utils/validation_utils.dart';
 import 'package:tride/core/widgets/custom_button.dart';
 import 'package:tride/core/widgets/input_field_widget.dart';
+import 'package:tride/generated/l10n.dart';
 
 class ResetPasswordBody extends StatelessWidget {
   const ResetPasswordBody({super.key});
@@ -18,17 +19,20 @@ class ResetPasswordBody extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text("Forget password", style: AppTextStyles.robotoW600S24),
+          Text(
+            S.of(context).forgot_password,
+            style: AppTextStyles.robotoW600S24,
+          ),
           const SizedBox(height: 72),
           InputFieldWidget(
-            labelText: "Your Email",
+            labelText: S.of(context).your_email,
             keyboardType: TextInputType.emailAddress,
             validator: ValidationUtils.validateEmail,
             textController: TextEditingController(text: "Hello@gmail.com"),
           ),
           const SizedBox(height: 48),
           CustomButton(
-            text: "Send code",
+            text: S.of(context).send_code,
             bgColor: Colors.orange,
             textColor: Colors.white,
             onPressed: () {

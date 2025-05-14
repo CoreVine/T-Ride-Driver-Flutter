@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:tride/core/theming/app_colors.dart';
 import 'package:tride/core/widgets/custom_button.dart';
+import 'package:tride/generated/l10n.dart';
 
 import '../../../../core/theming/app_text_styles.dart';
 import 'languages_listview_builder.dart';
@@ -38,13 +39,16 @@ Future<dynamic> showLanguagesModalBottomSheet(BuildContext context) {
               DragHandle(),
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 40),
-                child: Text("Language", style: AppTextStyles.roboto18Medium),
+                child: Text(
+                  S.of(context).language,
+                  style: AppTextStyles.roboto18Medium,
+                ),
               ),
               const Expanded(child: LanguagesListViewBuilder()),
               Padding(
                 padding: const EdgeInsets.all(16),
                 child: CustomButton(
-                  text: "Change",
+                  text: S.of(context).change,
                   bgColor: AppColors.orange,
                   // textColor: AppColors.background,
                   onPressed: () {},

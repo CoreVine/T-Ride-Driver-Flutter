@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:tride/core/theming/app_colors.dart';
 import 'package:tride/core/theming/app_text_styles.dart';
 import 'package:tride/core/widgets/custom_button.dart';
+import 'package:tride/generated/l10n.dart';
 
 import 'pick_image_widget.dart';
 import 'user_data_form_section.dart';
@@ -9,7 +10,7 @@ import 'user_data_form_section.dart';
 class UserProfileScreenBody extends StatelessWidget {
   UserProfileScreenBody({super.key});
   final TextEditingController userNameController = TextEditingController(
-    text: "Hayam Tarek",
+    text: "Mohammad Ali",
   );
   final TextEditingController phoneController = TextEditingController(
     text: "0123456789",
@@ -25,7 +26,10 @@ class UserProfileScreenBody extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text("Captain's information", style: AppTextStyles.robotoW600S24),
+            Text(
+              S.of(context).captain_information,
+              style: AppTextStyles.robotoW600S24,
+            ),
             SizedBox(height: 32),
             const PickImageWidget(),
             SizedBox(height: 32),
@@ -36,7 +40,7 @@ class UserProfileScreenBody extends StatelessWidget {
             ),
             SizedBox(height: 48),
             CustomButton(
-              text: "Save",
+              text: S.of(context).save,
               bgColor: AppColors.orange,
               textColor: AppColors.white,
               onPressed: () {

@@ -5,6 +5,7 @@ import 'package:tride/core/theming/app_text_styles.dart';
 import 'package:tride/core/utils/validation_utils.dart';
 import 'package:tride/core/widgets/custom_button.dart';
 import 'package:tride/core/widgets/input_field_widget.dart';
+import 'package:tride/generated/l10n.dart';
 
 class UpdatePasswordScreenBody extends StatelessWidget {
   const UpdatePasswordScreenBody({super.key});
@@ -17,10 +18,13 @@ class UpdatePasswordScreenBody extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text("Reset old password", style: AppTextStyles.robotoW600S24),
+          Text(
+            S.of(context).reset_password,
+            style: AppTextStyles.robotoW600S24,
+          ),
           const SizedBox(height: 72),
           InputFieldWidget(
-            labelText: "New Password",
+            labelText: S.of(context).new_password,
             keyboardType: TextInputType.visiblePassword,
             obscureText: true,
             showObscureIcon: true,
@@ -29,7 +33,7 @@ class UpdatePasswordScreenBody extends StatelessWidget {
           ),
           const SizedBox(height: 16),
           InputFieldWidget(
-            labelText: "Confirm New Password",
+            labelText: S.of(context).confirm_new_password,
             keyboardType: TextInputType.visiblePassword,
             obscureText: true,
             showObscureIcon: true,
@@ -40,7 +44,7 @@ class UpdatePasswordScreenBody extends StatelessWidget {
           CustomButton(
             bgColor: AppColors.orange,
             textColor: AppColors.white,
-            text: "Set Password",
+            text: S.of(context).set_password,
             onPressed: () {},
           ),
         ],

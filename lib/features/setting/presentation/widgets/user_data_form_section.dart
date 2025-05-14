@@ -6,6 +6,7 @@ import 'package:tride/core/utils/work_areas.dart';
 import 'package:tride/core/widgets/input_field_widget.dart';
 import 'package:tride/features/setting/presentation/widgets/custom_dropdown_button.dart';
 import 'package:tride/features/setting/presentation/widgets/gender_widget.dart';
+import 'package:tride/generated/l10n.dart';
 
 class UserDataFormSection extends StatefulWidget {
   const UserDataFormSection({
@@ -35,13 +36,13 @@ class _UserDataFormSectionState extends State<UserDataFormSection> {
         children: [
           InputFieldWidget(
             textController: widget.userNameController,
-            labelText: "Captain's name",
+            labelText: S.of(context).captain_name,
             keyboardType: TextInputType.text,
             validator: ValidationUtils.validateUsername,
           ),
           InputFieldWidget(
             textController: widget.phoneController,
-            labelText: "Phone",
+            labelText: S.of(context).phone_number,
             keyboardType: TextInputType.phone,
             validator: ValidationUtils.validatePhoneNumber,
           ),
@@ -49,7 +50,7 @@ class _UserDataFormSectionState extends State<UserDataFormSection> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               CustomDropdownButton(
-                label: "Governorate",
+                label: S.of(context).governorate,
                 items: governorates,
                 value: selectedGovernorate,
                 onChanged: (String? newValue) {
@@ -59,7 +60,7 @@ class _UserDataFormSectionState extends State<UserDataFormSection> {
                 },
               ),
               CustomDropdownButton(
-                label: "Work Area",
+                label: S.of(context).work_area,
                 items: workAreas,
                 value: selectedWorkArea,
                 onChanged: (String? newValue) {

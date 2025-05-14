@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:tride/core/widgets/custom_button.dart';
+import 'package:tride/generated/l10n.dart';
 
 import '../../../../core/theming/app_colors.dart';
 import '../../../../core/theming/app_text_styles.dart';
@@ -26,7 +27,7 @@ Future<dynamic> showLogOutDialog(BuildContext context) {
           ),
         ),
         title: Text(
-          "Warning: You are about Log Out",
+          S.of(context).warning_logout_message,
           style: AppTextStyles.roboto16Regular,
         ),
         actions: [
@@ -34,7 +35,7 @@ Future<dynamic> showLogOutDialog(BuildContext context) {
             children: [
               Expanded(
                 child: CustomButton(
-                  text: "Cancel",
+                  text: S.of(context).cancel,
                   bgColor: AppColors.white,
                   borderColor: AppColors.grayE4,
                   textColor: AppColors.black,
@@ -46,7 +47,7 @@ Future<dynamic> showLogOutDialog(BuildContext context) {
               const SizedBox(width: 24),
               Expanded(
                 child: CustomButton(
-                  text: "Logout",
+                  text: S.of(context).logout,
                   bgColor: AppColors.red,
                   textColor: AppColors.white,
                   onPressed: () {},
