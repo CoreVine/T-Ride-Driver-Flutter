@@ -30,4 +30,6 @@ class AppAssets {
   static const String banner3 = 'assets/images/homeSlider.jpg';
   static const String product = 'assets/images/product.png';
   static const String searchIcon = 'assets/icons/search_icon.svg';
+  static const String pushNotificationImage =
+      'assets/images/Push notifications pana.png';
 }

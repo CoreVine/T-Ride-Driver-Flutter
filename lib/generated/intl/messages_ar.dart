@@ -22,6 +22,13 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+    "check_back_later": MessageLookupByLibrary.simpleMessage(
+      "لقد أنهيت جميع المهام! تحقق لاحقًا للحصول على التحديثات الجديدة.",
+    ),
+    "no_notifications_yet": MessageLookupByLibrary.simpleMessage(
+      "لا توجد إشعارات حتى الآن",
+    ),
+    "notifications": MessageLookupByLibrary.simpleMessage("الإشعارات"),
     "welcome": MessageLookupByLibrary.simpleMessage(
       "مرحبًا بك في تطبيق T-Ride",
     ),

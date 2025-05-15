@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tride/core/routing/routes.dart';
 import 'package:tride/features/Auth/presentation/pages/login_screen.dart';
+import 'package:tride/features/notifications/presentation/pages/notification_screen.dart';
 import 'package:tride/features/splash/splash_screen.dart';
 
 class AppRouter {
@@ -8,6 +9,8 @@ class AppRouter {
     //this arguments to be passed in any screen like this ( arguments as ClassName )
 
     switch (settings.name) {
+      case Routes.notificationsScreen:
+        return MaterialPageRoute(builder: (_) => const NotificationsScreen());
       case Routes.splashScreen:
         return MaterialPageRoute(builder: (_) => const SplashScreen());
 

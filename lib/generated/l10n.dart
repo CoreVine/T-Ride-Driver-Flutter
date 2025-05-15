@@ -55,6 +55,36 @@ class S {
     return Localizations.of<S>(context, S);
   }
 
+  /// `You’re all caught up! check back later for new updates`
+  String get check_back_later {
+    return Intl.message(
+      'You’re all caught up! check back later for new updates',
+      name: 'check_back_later',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `No Notifications Yet`
+  String get no_notifications_yet {
+    return Intl.message(
+      'No Notifications Yet',
+      name: 'no_notifications_yet',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Notifications`
+  String get notifications {
+    return Intl.message(
+      'Notifications',
+      name: 'notifications',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Welcome to T-Ride App`
   String get welcome {
     return Intl.message(
