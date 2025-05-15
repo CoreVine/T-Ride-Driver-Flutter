@@ -34,9 +34,9 @@ class _CustomDropdownButtonState<T> extends State<CustomDropdownButton<T>> {
         children: [
           Text(
             widget.label,
-            style: AppTextStyles.roboto12Medium.copyWith(
-              color: AppColors.darkGray,
-            ),
+            style: AppTextStyles.roboto12Medium(
+              context,
+            ).copyWith(color: AppColors.darkGray),
           ),
           DropdownButton<T>(
             hint: widget.hint != null ? Text(widget.hint!) : null,

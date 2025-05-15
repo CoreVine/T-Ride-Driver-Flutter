@@ -43,7 +43,9 @@ class _OTPWidgetState extends State<OTPWidget> {
       children: [
         Text(
           S.of(context).enter_code,
-          style: AppTextStyles.roboto12Medium.copyWith(color: AppColors.silver),
+          style: AppTextStyles.roboto12Medium(
+            context,
+          ).copyWith(color: AppColors.silver),
         ),
         Center(
           child: Row(
@@ -57,7 +59,7 @@ class _OTPWidgetState extends State<OTPWidget> {
                     focusNode: _focusNodes[index],
                     textAlign: TextAlign.center,
                     cursorColor: AppColors.orange,
-                    style: AppTextStyles.roboto18Medium.copyWith(
+                    style: AppTextStyles.roboto18Medium(context).copyWith(
                       color:
                           _focusNodes[index].hasFocus
                               ? AppColors.orange

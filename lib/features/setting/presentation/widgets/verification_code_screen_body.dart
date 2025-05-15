@@ -22,7 +22,7 @@ class VerificationCodeScreenBody extends StatelessWidget {
         children: [
           Text(
             S.of(context).email_verification,
-            style: AppTextStyles.robotoW600S24,
+            style: AppTextStyles.roboto24SemiBold(context),
           ),
           const SizedBox(height: 72),
           const OTPWidget(),

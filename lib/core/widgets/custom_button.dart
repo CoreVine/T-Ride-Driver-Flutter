@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:tride/core/theming/app_colors.dart';
+import 'package:tride/core/theming/app_strokes.dart';
 import 'package:tride/core/theming/app_text_styles.dart';
 
 class CustomButton extends StatelessWidget {
@@ -12,6 +13,7 @@ class CustomButton extends StatelessWidget {
   final double? yPadding;
   final TextStyle? textStyle;
   final Function()? onPressed;
+  final bool isLoading;
 
   const CustomButton({
     super.key,
@@ -23,6 +25,7 @@ class CustomButton extends StatelessWidget {
     required this.text,
     required this.onPressed,
     this.borderColor,
+    this.isLoading = false,
   });
 
   @override
@@ -33,7 +36,7 @@ class CustomButton extends StatelessWidget {
         onPressed: onPressed,
         style: ElevatedButton.styleFrom(
           elevation: 0,
-          backgroundColor: bgColor ?? AppColors.gray,
+          backgroundColor: bgColor ?? AppColors.orange,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(32.r),
             side: BorderSide(
@@ -42,14 +45,26 @@ class CustomButton extends StatelessWidget {
             ),
           ),
         ),
-        child: Text(
-          text,
-          style:
-              textStyle ??
-              AppTextStyles.robotoMedium.copyWith(
-                color: textColor ?? AppColors.background,
-              ),
-        ),
+        child:
+            isLoading
+                ? Center(
+                  child: SizedBox(
+                    width: 24,
+                    height: 24,
+                    child: CircularProgressIndicator(
+                      color: AppColors.white,
+                      strokeWidth: AppStrokes.strokeVlg,
+                    ),
+                  ),
+                )
+                : Text(
+                  text,
+                  style:
+                      textStyle ??
+                      AppTextStyles.roboto16SemiBold(
+                        context,
+                      ).copyWith(color: textColor ?? AppColors.white),
+                ),
       ),
     );
   }

@@ -34,9 +34,9 @@ class _InputFieldWidgetState extends State<InputFieldWidget> {
       children: [
         Text(
           widget.labelText,
-          style: AppTextStyles.roboto12Medium.copyWith(
-            color: AppColors.darkGray,
-          ),
+          style: AppTextStyles.roboto12Medium(
+            context,
+          ).copyWith(color: AppColors.darkGray),
         ),
         TextFormField(
           keyboardType: widget.keyboardType,

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:tride/core/di/dependency_injection.dart';
 import 'package:tride/features/translation/cubit/localization_cubit.dart';
 import 'package:tride/generated/l10n.dart';
@@ -38,7 +38,7 @@ class TrideApp extends StatelessWidget {
               ),
               debugShowCheckedModeBanner: false,
               //   initialRoute: isLoggedInUser ? Routes.homeScreen : Routes.loginScreen,
-              initialRoute: Routes.splashScreen,
+              initialRoute: Routes.settingScreen,
               onGenerateRoute: AppRouter.generateRoute,
             );
           },

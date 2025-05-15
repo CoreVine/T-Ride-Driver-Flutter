@@ -62,7 +62,7 @@ class _ResendCodeWidgetState extends State<ResendCodeWidget> {
           onTap: _canResend ? resendCode : null,
           child: Text(
             S.of(context).resend_the_code,
-            style: AppTextStyles.roboto14Medium.copyWith(
+            style: AppTextStyles.roboto14Medium(context).copyWith(
               fontWeight: AppFontWeights.fontWeightBold,
               color: _canResend ? Colors.orange : AppColors.black,
               decoration: TextDecoration.underline,
@@ -72,7 +72,7 @@ class _ResendCodeWidgetState extends State<ResendCodeWidget> {
         SizedBox(width: 8),
         Text(
           "0:${_seconds.toString().padLeft(2, '0')}",
-          style: AppTextStyles.roboto14Medium,
+          style: AppTextStyles.roboto14Medium(context),
         ),
       ],
     );

@@ -21,7 +21,7 @@ class ResetPasswordBody extends StatelessWidget {
         children: [
           Text(
             S.of(context).forgot_password,
-            style: AppTextStyles.robotoW600S24,
+            style: AppTextStyles.roboto24SemiBold(context),
           ),
           const SizedBox(height: 72),
           InputFieldWidget(

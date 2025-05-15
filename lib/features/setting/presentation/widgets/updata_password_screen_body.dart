@@ -28,7 +28,7 @@ class UpdatePasswordScreenBody extends StatelessWidget {
         children: [
           Text(
             S.of(context).reset_password,
-            style: AppTextStyles.robotoW600S24,
+            style: AppTextStyles.roboto24SemiBold(context),
           ),
           const SizedBox(height: 72),
           InputFieldWidget(
@@ -87,7 +87,7 @@ class UpdatePasswordScreenBody extends StatelessWidget {
           ),
           content: Text(
             S.of(context).password_set_successfully,
-            style: AppTextStyles.roboto16Medium,
+            style: AppTextStyles.roboto16Medium(context),
             textAlign: TextAlign.center,
           ),
         );

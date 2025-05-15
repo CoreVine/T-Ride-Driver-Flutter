@@ -34,9 +34,9 @@ class SettingItem extends StatelessWidget {
           ),
           title: Text(
             title,
-            style: AppTextStyles.robotoMedium.copyWith(
-              color: iconColor ?? AppColors.black,
-            ),
+            style: AppTextStyles.roboto16Medium(
+              context,
+            ).copyWith(color: iconColor ?? AppColors.black),
           ),
         ),
         const Divider(),

@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:tride/core/helpers/extensions.dart';
+import 'package:tride/core/theming/app_font_families.dart';
+import 'package:tride/core/theming/app_font_weights.dart';
+import 'package:tride/core/theming/app_text_size.dart';
 
 import 'app_colors.dart';
 

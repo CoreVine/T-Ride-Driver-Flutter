@@ -5,6 +5,7 @@ import 'package:tride/generated/l10n.dart';
 
 AppBar backAppBar(BuildContext context) {
   return customAppBar(
+    context: context,
     actionTitle: S.of(context).back,
     onTap: () {
       context.pop();

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:tride/core/theming/app_text_styles.dart';
 
 AppBar customAppBar({
+  required BuildContext context,
   required String actionTitle,
   required void Function()? onTap,
 }) {
@@ -14,7 +15,10 @@ AppBar customAppBar({
         onTap: onTap,
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 24),
-          child: Text(actionTitle, style: AppTextStyles.roboto18Medium),
+          child: Text(
+            actionTitle,
+            style: AppTextStyles.roboto18Medium(context),
+          ),
         ),
       ),
     ],

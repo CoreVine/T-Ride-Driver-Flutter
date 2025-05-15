@@ -41,7 +41,7 @@ Future<dynamic> showLanguagesModalBottomSheet(BuildContext context) {
                 padding: const EdgeInsets.symmetric(vertical: 40),
                 child: Text(
                   S.of(context).language,
-                  style: AppTextStyles.roboto18Medium,
+                  style: AppTextStyles.roboto18Medium(context),
                 ),
               ),
               const Expanded(child: LanguagesListViewBuilder()),

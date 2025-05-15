@@ -20,9 +20,9 @@ class _GenderWidgetState extends State<GenderWidget> {
       children: [
         Text(
           S.of(context).gender,
-          style: AppTextStyles.roboto12Medium.copyWith(
-            color: AppColors.darkGray,
-          ),
+          style: AppTextStyles.roboto12Medium(
+            context,
+          ).copyWith(color: AppColors.darkGray),
         ),
         Row(
           mainAxisAlignment: MainAxisAlignment.start,
@@ -33,7 +33,10 @@ class _GenderWidgetState extends State<GenderWidget> {
               onChanged: _onChooseMale,
               activeColor: AppColors.blue,
             ),
-            Text(S.of(context).male, style: AppTextStyles.roboto16Medium),
+            Text(
+              S.of(context).male,
+              style: AppTextStyles.roboto16Medium(context),
+            ),
             SizedBox(width: 24),
             Radio<String>(
               value: 'Female',
@@ -41,7 +44,10 @@ class _GenderWidgetState extends State<GenderWidget> {
               onChanged: _onChooseFemale,
               activeColor: AppColors.blue,
             ),
-            Text(S.of(context).female, style: AppTextStyles.roboto16Medium),
+            Text(
+              S.of(context).female,
+              style: AppTextStyles.roboto16Medium(context),
+            ),
           ],
         ),
       ],

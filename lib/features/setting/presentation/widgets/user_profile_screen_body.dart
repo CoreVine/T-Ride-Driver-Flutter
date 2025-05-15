@@ -28,7 +28,7 @@ class UserProfileScreenBody extends StatelessWidget {
           children: [
             Text(
               S.of(context).captain_information,
-              style: AppTextStyles.robotoW600S24,
+              style: AppTextStyles.roboto24SemiBold(context),
             ),
             SizedBox(height: 32),
             const PickImageWidget(),

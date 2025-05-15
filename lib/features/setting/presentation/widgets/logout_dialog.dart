@@ -28,7 +28,7 @@ Future<dynamic> showLogOutDialog(BuildContext context) {
         ),
         title: Text(
           S.of(context).warning_logout_message,
-          style: AppTextStyles.roboto16Regular,
+          style: AppTextStyles.roboto16Regular(context),
         ),
         actions: [
           Row(

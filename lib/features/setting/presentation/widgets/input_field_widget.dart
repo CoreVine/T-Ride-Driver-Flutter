@@ -35,7 +35,7 @@ class InputFieldWidget extends StatelessWidget {
           borderSide: BorderSide(color: AppColors.red),
         ),
         labelText: labelText,
-        labelStyle: AppTextStyles.robotoMedium,
+        labelStyle: AppTextStyles.roboto16Medium(context),
       ),
     );
   }

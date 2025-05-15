@@ -40,7 +40,7 @@ class LanguageItem extends StatelessWidget {
               backgroundImage: AssetImage(assetName),
             ),
           ),
-          title: Text(title, style: AppTextStyles.robotoMedium),
+          title: Text(title, style: AppTextStyles.roboto16Medium(context)),
           trailing:
               selected
                   ? SizedBox(
