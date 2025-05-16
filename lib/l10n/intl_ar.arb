@@ -23,7 +23,7 @@
   "privacyPolicy": "سياسة الخصوصية الخاصة بنا.",
   "forgetPassword": "نسيت كلمة المرور",
   "forget": "نسيت كلمة المرور",
-  "sendCode": "Send code",
+  "sendCode": "ادخل الرمز",
   "back": "رجوع",
   "emailVerification": "التحقق من البريد الإلكتروني",
   "enterCode": "أدخل الرمز",
@@ -32,6 +32,11 @@
   "resetPassword": "إعادة تعيين كلمة المرور القديمة",
   "newPassword": "كلمة المرور الجديدة",
   "confirmPassword": "تاكيد كلمة المرور",
-  "setPassword" : "تغيير كلمة المرور",
-  "passwordSetSuccessfully" : "تم تعيين كلمة المرور بنجاح"
+  "setPassword": "تغيير كلمة المرور",
+  "passwordSetSuccessfully": "تم تعيين كلمة المرور بنجاح",
+  "welcomeCaptain": "مرحبًا، الكابتن ",
+  "awaitingApproval": "في انتظار الموافقة",
+  "pleaseWaitWhileTheAdminReview": "يرجى الانتظار بينما يقوم المسؤول بمراجعة بياناتك والموافقة على طلبك. سيتم إعلامك فور اتخاذ القرار.",
+  "searchForRides": "ابحث عن رحلات",
+  "startNowRides": "ابدأ الآن! ابحث عن الرحلات المتاحة وابدأ رحلتك ككابتن."
 }

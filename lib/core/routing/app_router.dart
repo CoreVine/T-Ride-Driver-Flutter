@@ -7,6 +7,8 @@ import 'package:tride/features/Auth/presentation/pages/login_screen/login_screen
 import 'package:tride/features/Auth/presentation/pages/register_screen/register_screen.dart';
 import 'package:tride/features/Auth/presentation/pages/reset_password/reset_password.dart';
 import 'package:tride/features/Auth/presentation/pages/verify_code/verify_code_screen.dart';
+import 'package:tride/features/Home/presentation/cubit/home_cubit.dart';
+import 'package:tride/features/Home/presentation/pages/home_screen.dart';
 import 'package:tride/features/onboarding/presentation/pages/on_boarding_screen.dart';
 import 'package:tride/features/splash/splash_screen.dart';
 
@@ -57,6 +59,12 @@ class AppRouter {
                   create: (context) => getIt<OnBoardingCubit>(),
                   child: OnboardingScreen(),
                 ));
+      case Routes.homeScreen:
+        return MaterialPageRoute(
+            builder: (_) => BlocProvider(
+              create: (context) => getIt<HomeCubit>(),
+              child: HomeScreen(),
+            ));
       // case Routes.signUpScreen:
       //   return MaterialPageRoute(builder: (_) => const SignupScreen());
 

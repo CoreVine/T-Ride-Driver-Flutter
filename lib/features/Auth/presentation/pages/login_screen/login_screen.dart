@@ -31,7 +31,7 @@ class LoginScreen extends StatelessWidget {
       },
       buttonText: S.of(context).login,
       onButtonTap: () {
-        // Handle login
+        Navigator.pushNamed(context, Routes.homeScreen);
       },
       passwordTextField: BlocBuilder<AuthCubit, AuthState>(
         builder: (context, state) {

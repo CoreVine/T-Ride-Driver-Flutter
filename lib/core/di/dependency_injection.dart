@@ -5,6 +5,8 @@ import 'package:tride/features/Auth/presentation/cubit/auth_cubit.dart';
 import 'package:tride/features/onboarding/presentation/manager/on_boarding_cubit.dart';
 import 'package:tride/features/translation/cubit/localization_cubit.dart';
 
+import '../../features/Home/presentation/cubit/home_cubit.dart';
+
 final getIt = GetIt.instance;
 
 Future<void> setupGetIt() async {
@@ -92,6 +94,7 @@ Future<void> setupGetIt() async {
   getIt.registerFactory<LocaleCubit>(() => LocaleCubit());
   getIt.registerFactory<OnBoardingCubit>(() => OnBoardingCubit());
   getIt.registerFactory<AuthCubit>(() => AuthCubit());
+  getIt.registerFactory<HomeCubit>(() => HomeCubit());
 
   //   getIt.registerFactory<CompaniesCubit>(
   //     () => CompaniesCubit(getIt<GetCompaniesUsecaseImpl>()),

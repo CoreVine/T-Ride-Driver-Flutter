@@ -314,6 +314,56 @@ class S {
       args: [],
     );
   }
+
+  /// `Welcome, Captain`
+  String get welcomeCaptain {
+    return Intl.message(
+      'Welcome, Captain',
+      name: 'welcomeCaptain',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Awaiting Approval`
+  String get awaitingApproval {
+    return Intl.message(
+      'Awaiting Approval',
+      name: 'awaitingApproval',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please wait while the admin reviews your details and approves your request. You’ll be notified once a decision is made.`
+  String get pleaseWaitWhileTheAdminReview {
+    return Intl.message(
+      'Please wait while the admin reviews your details and approves your request. You’ll be notified once a decision is made.',
+      name: 'pleaseWaitWhileTheAdminReview',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Search for Rides`
+  String get searchForRides {
+    return Intl.message(
+      'Search for Rides',
+      name: 'searchForRides',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Start Now! Search for available rides and begin your journey as a captain.`
+  String get startNowRides {
+    return Intl.message(
+      'Start Now! Search for available rides and begin your journey as a captain.',
+      name: 'startNowRides',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

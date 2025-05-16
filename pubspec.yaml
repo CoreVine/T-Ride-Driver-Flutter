@@ -52,6 +52,7 @@ dependencies:
   shared_preferences: ^2.2.3
   skeletonizer: ^1.4.3
   cupertino_icons: ^1.0.8
+  lottie: ^3.2.0
   flutter_localizations:
     sdk: flutter
   intl_utils: ^2.8.10
@@ -81,6 +82,7 @@ flutter:
     - assets/images/
     - assets/svgs/
     - assets/icons/
+    - assets/lotties/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
@@ -120,7 +122,7 @@ flutter:
           weight: 700
         - asset: assets/fonts/Roboto-Black.ttf
           weight: 900
-    
+
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package
 flutter_intl:

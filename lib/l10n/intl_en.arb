@@ -31,6 +31,11 @@
   "resetPassword": "Reset password",
   "newPassword": "New password",
   "confirmPassword": "Confirm password",
-  "setPassword" : "Set password",
-  "passwordSetSuccessfully" : "Password set successfully"
+  "setPassword": "Set password",
+  "passwordSetSuccessfully": "Password set successfully",
+  "welcomeCaptain": "Welcome, Captain",
+  "awaitingApproval": "Awaiting Approval",
+  "pleaseWaitWhileTheAdminReview": "Please wait while the admin reviews your details and approves your request. You’ll be notified once a decision is made.",
+  "searchForRides" : "Search for Rides",
+  "startNowRides" : "Start Now! Search for available rides and begin your journey as a captain."
 }

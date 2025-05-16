@@ -55,13 +55,13 @@ class CustomTextField extends StatelessWidget {
               ),
               isDense: true,
               border: UnderlineInputBorder(
-                borderSide: BorderSide(color: AppColors.gray),
+                borderSide: BorderSide(color: AppColors.black),
               ),
               focusedBorder: UnderlineInputBorder(
                 borderSide: BorderSide(color: AppColors.orange, width: 2.w),
               ),
               enabledBorder: UnderlineInputBorder(
-                borderSide: BorderSide(color: AppColors.gray),
+                borderSide: BorderSide(color: AppColors.black),
               ),
               errorBorder: UnderlineInputBorder(
                 borderSide: BorderSide(color: AppColors.red),

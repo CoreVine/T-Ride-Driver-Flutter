@@ -84,8 +84,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
       children: [
         Text(
           page.title,
-          style: AppTextStyles.roboto16Regular(context)
-              .copyWith(color: AppColors.black),
+          style: AppTextStyles.roboto24Bold(context),
           textAlign: TextAlign.center,
         ),
         SizedBox(height: 8.h),

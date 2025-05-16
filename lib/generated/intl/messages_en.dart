@@ -23,6 +23,9 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
     "and": MessageLookupByLibrary.simpleMessage(" and "),
+    "awaitingApproval": MessageLookupByLibrary.simpleMessage(
+      "Awaiting Approval",
+    ),
     "back": MessageLookupByLibrary.simpleMessage("back"),
     "bySigningUpYouAgreeToOur": MessageLookupByLibrary.simpleMessage(
       "By signing up, you agree to our ",
@@ -53,9 +56,13 @@ class MessageLookup extends MessageLookupByLibrary {
     "passwordSetSuccessfully": MessageLookupByLibrary.simpleMessage(
       "Password set successfully",
     ),
+    "pleaseWaitWhileTheAdminReview": MessageLookupByLibrary.simpleMessage(
+      "Please wait while the admin reviews your details and approves your request. You’ll be notified once a decision is made.",
+    ),
     "privacyPolicy": MessageLookupByLibrary.simpleMessage("Privacy Policy"),
     "resendTheCode": MessageLookupByLibrary.simpleMessage("Resend the code"),
     "resetPassword": MessageLookupByLibrary.simpleMessage("Reset password"),
+    "searchForRides": MessageLookupByLibrary.simpleMessage("Search for Rides"),
     "secondOnBoardingDesc": MessageLookupByLibrary.simpleMessage(
       "View nearby requests, accept rides, and get started seamlessly.",
     ),
@@ -67,6 +74,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "signUp": MessageLookupByLibrary.simpleMessage("Sign Up"),
     "skip": MessageLookupByLibrary.simpleMessage("Skip"),
     "start": MessageLookupByLibrary.simpleMessage("Start"),
+    "startNowRides": MessageLookupByLibrary.simpleMessage(
+      "Start Now! Search for available rides and begin your journey as a captain.",
+    ),
     "termsOfUse": MessageLookupByLibrary.simpleMessage("Terms of Use"),
     "thirdOnBoardingDesc": MessageLookupByLibrary.simpleMessage(
       "Follow safety protocols to ensure the comfort and security of families.",
@@ -75,6 +85,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Safety and Trust Above All",
     ),
     "welcome": MessageLookupByLibrary.simpleMessage("Welcome to T-Ride App"),
+    "welcomeCaptain": MessageLookupByLibrary.simpleMessage("Welcome, Captain"),
     "yourEmail": MessageLookupByLibrary.simpleMessage("Your Email"),
   };
 }

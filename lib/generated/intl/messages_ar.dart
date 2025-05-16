@@ -23,6 +23,9 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
     "and": MessageLookupByLibrary.simpleMessage(" و "),
+    "awaitingApproval": MessageLookupByLibrary.simpleMessage(
+      "في انتظار الموافقة",
+    ),
     "back": MessageLookupByLibrary.simpleMessage("رجوع"),
     "bySigningUpYouAgreeToOur": MessageLookupByLibrary.simpleMessage(
       "تسجيلك, فإنك توافق على",
@@ -55,6 +58,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "passwordSetSuccessfully": MessageLookupByLibrary.simpleMessage(
       "تم تعيين كلمة المرور بنجاح",
     ),
+    "pleaseWaitWhileTheAdminReview": MessageLookupByLibrary.simpleMessage(
+      "يرجى الانتظار بينما يقوم المسؤول بمراجعة بياناتك والموافقة على طلبك. سيتم إعلامك فور اتخاذ القرار.",
+    ),
     "privacyPolicy": MessageLookupByLibrary.simpleMessage(
       "سياسة الخصوصية الخاصة بنا.",
     ),
@@ -62,17 +68,21 @@ class MessageLookup extends MessageLookupByLibrary {
     "resetPassword": MessageLookupByLibrary.simpleMessage(
       "إعادة تعيين كلمة المرور القديمة",
     ),
+    "searchForRides": MessageLookupByLibrary.simpleMessage("ابحث عن رحلات"),
     "secondOnBoardingDesc": MessageLookupByLibrary.simpleMessage(
       "عرض الطلبات القريبة، وقبول الرحلات، والبدء بسهولة",
     ),
     "secondOnBoardingTitle": MessageLookupByLibrary.simpleMessage(
       "إدارة رحلات سهلة",
     ),
-    "sendCode": MessageLookupByLibrary.simpleMessage("Send code"),
+    "sendCode": MessageLookupByLibrary.simpleMessage("ادخل الرمز"),
     "setPassword": MessageLookupByLibrary.simpleMessage("تغيير كلمة المرور"),
     "signUp": MessageLookupByLibrary.simpleMessage("تسجيل حساب"),
     "skip": MessageLookupByLibrary.simpleMessage("تخطي"),
     "start": MessageLookupByLibrary.simpleMessage("ابدء"),
+    "startNowRides": MessageLookupByLibrary.simpleMessage(
+      "ابدأ الآن! ابحث عن الرحلات المتاحة وابدأ رحلتك ككابتن.",
+    ),
     "termsOfUse": MessageLookupByLibrary.simpleMessage("شروط الاستخدام "),
     "thirdOnBoardingDesc": MessageLookupByLibrary.simpleMessage(
       "اتبع بروتوكولات السلامة لضمان راحة وأمان العائلات",
@@ -83,6 +93,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "welcome": MessageLookupByLibrary.simpleMessage(
       "مرحبًا بك في تطبيق T-Ride",
     ),
+    "welcomeCaptain": MessageLookupByLibrary.simpleMessage("مرحبًا، الكابتن "),
     "yourEmail": MessageLookupByLibrary.simpleMessage("البريد الالكتروني"),
   };
 }
