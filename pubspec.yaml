@@ -56,6 +56,8 @@ dependencies:
     sdk: flutter
 
 dev_dependencies:
+  flutter_gen_runner: ^5.0.2 # Add this for generating asset references
+  build_runner: ^2.4.3       # Required to run the code generation
   flutter_test:
     sdk: flutter
 
