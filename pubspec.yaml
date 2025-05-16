@@ -56,8 +56,6 @@ dependencies:
     sdk: flutter
 
 dev_dependencies:
-  flutter_gen_runner: ^5.0.2 # Add this for generating asset references
-  build_runner: ^2.4.3       # Required to run the code generation
   flutter_test:
     sdk: flutter
 
@@ -67,7 +65,13 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^5.0.0
-
+flutter_assets:
+  assets_path:
+    - assets/svgs
+    - assets/icons
+    - assets/images
+  output_path: lib/core/constants/
+  filename: assets.dart
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 # The following section is specific to Flutter packages.
